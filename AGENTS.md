@@ -3,10 +3,12 @@
 When starting the dev server, use background mode:
 
 ```
-astro dev --background
+bunx astro dev --background
 ```
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Manage the background server with `bunx astro dev stop`, `bunx astro dev status`, and `bunx astro dev logs`.
+
+For package management, use `bun install`, `bun add`, and `bun remove`.
 
 ## Documentation
 
