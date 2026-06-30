@@ -1,17 +1,27 @@
 ---
 export interface Props {
-  title: string;
-  subtitle?: string;
-  bgClass?: string;
+    title: string;
+    subtitle?: string;
+    bgClass?: string;
 }
 
 const { title, subtitle, bgClass = "bg-placeholder-1" } = Astro.props;
 ---
 
-<div class={`relative w-full h-[347px] border border-white/20 group overflow-hidden ${bgClass}`}>
-    <div class="absolute inset-0 gallery-overlay opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<div
+    class={`relative w-full h-[347px] border border-white/20 group overflow-hidden ${bgClass}`}
+>
+    <div
+        class="absolute inset-0 gallery-overlay opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6"
+    >
         <div>
-            {subtitle && <p class="text-[#bdbdbd] mono text-xs mb-1 uppercase tracking-wider">{subtitle}</p>}
+            {
+                subtitle && (
+                    <p class="text-[#bdbdbd] mono text-xs mb-1 uppercase tracking-wider">
+                        {subtitle}
+                    </p>
+                )
+            }
             <p class="text-white font-bold">{title}</p>
         </div>
     </div>
