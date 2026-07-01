@@ -7,7 +7,7 @@ class ServiceCard extends HTMLElement {
     const bgClass = src ? '' : (this.getAttribute('bgClass') || 'bg-placeholder-2');
     const imgHtml = src ? `<img src="${src}" alt="${title}" class="w-full h-full object-cover">` : '';
 
-    this.innerHTML = `
+    this.innerHTML = /*html*/`
       <div class="bg-[#111] border border-white/10 flex flex-col h-[381px] group m-4">
           <div class="h-[220px] w-full relative ${bgClass}">${imgHtml}</div>
           <div class="p-6 flex-1 flex flex-col justify-between bg-[#111111]">
