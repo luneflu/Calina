@@ -1,26 +1,23 @@
 class AdvantageCard extends HTMLElement {
   connectedCallback() {
-    const title = this.getAttribute("title") || "";
-    const description = this.getAttribute("description") || "";
-    const icon = this.getAttribute("icon") || "";
+    const title = this.getAttribute('title') || '';
+    const description = this.getAttribute('description') || '';
+    const icon = this.getAttribute('icon') || 'fa-solid fa-star';
 
-    this.innerHTML = /*html*/`
-      <div class="p-8 flex flex-col justify-between border border-transparent hover:border-red-700 transition-colors bg-black/20 group h-[200px]">
-        <div class="flex justify-between items-start">
-          <div class="text-2xl text-red-700 group-hover:scale-110 transition-transform">
-            <i class="${icon}"></i>
+    this.innerHTML = `
+      <div class="border border-white/10 p-6 md:p-8 bg-[#0d0d0d] hover:border-amber-500/50 transition-colors group">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 border border-amber-500/30 text-amber-500 bg-amber-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+            <i class="${icon} text-lg"></i>
           </div>
+          <h3 class="text-lg font-bold font-heading text-white">${title}</h3>
         </div>
-        <div>
-          <h3 class="text-sm font-bold font-sans mb-1 text-white">
-            ${title}
-          </h3>
-          <p class="text-[#bdbdbd] font-light text-xs font-sans">
-            ${description}
-          </p>
-        </div>
+        <p class="text-gray-400 text-sm font-light font-sans leading-relaxed">${description}</p>
       </div>
     `;
   }
 }
-customElements.define("advantage-card", AdvantageCard);
+
+if (!customElements.get('advantage-card')) {
+  customElements.define('advantage-card', AdvantageCard);
+}
