@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <title>PT Cahaya Lintang Abadi</title>
+    <link rel="icon" href="image/LOGO CLA.png" type="image/png">
+    <title>PT Cahaya Lintang Abadi - Partner In Excellence</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Fonts & Icons -->
@@ -55,7 +54,94 @@
                     rgba(0, 0, 0, 0) 100%);
         }
 
-        /* Navbar Active Styles */
+        /* ========== NAVBAR TRANSPARENT STYLES ========== */
+        .navbar {
+            transition: all 0.4s ease-in-out;
+            background-color: transparent;
+            border-bottom-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Navbar Solid saat di-scroll atau di section lain */
+        .navbar-solid {
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ========== NAVBAR TRANSPARENT - TEXT COLORS ========== */
+        .navbar-transparent .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .navbar-transparent .nav-link:hover {
+            color: #f59e0b !important;
+        }
+
+        .navbar-transparent .nav-link.active {
+            color: #f59e0b !important;
+        }
+
+        .navbar-transparent .btn-hubungi {
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            color: #ffffff !important;
+        }
+
+        .navbar-transparent .btn-hubungi:hover {
+            border-color: #f59e0b !important;
+            background-color: #f59e0b !important;
+            color: #000000 !important;
+        }
+
+        .navbar-transparent .btn-hubungi span {
+            color: #ffffff !important;
+        }
+
+        .navbar-transparent .btn-hubungi:hover span {
+            color: #000000 !important;
+        }
+
+        .navbar-transparent .mobile-menu-btn {
+            color: #ffffff !important;
+        }
+
+        /* ========== NAVBAR SOLID - TEXT COLORS ========== */
+        .navbar-solid .nav-link {
+            color: #bdbdbd !important;
+        }
+
+        .navbar-solid .nav-link:hover {
+            color: #f59e0b !important;
+        }
+
+        .navbar-solid .nav-link.active {
+            color: #f59e0b !important;
+        }
+
+        .navbar-solid .btn-hubungi {
+            border-color: #dc2626 !important;
+            color: #ffffff !important;
+        }
+
+        .navbar-solid .btn-hubungi:hover {
+            border-color: #f59e0b !important;
+            background-color: #f59e0b !important;
+            color: #000000 !important;
+        }
+
+        .navbar-solid .btn-hubungi span {
+            color: #ffffff !important;
+        }
+
+        .navbar-solid .btn-hubungi:hover span {
+            color: #000000 !important;
+        }
+
+        .navbar-solid .mobile-menu-btn {
+            color: #ffffff !important;
+        }
+
+        /* ========== NAVBAR ACTIVE LINK STYLES ========== */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -72,10 +158,6 @@
             transition: width 0.3s ease;
         }
 
-        .nav-link.active {
-            color: #f59e0b !important;
-        }
-
         .nav-link.active::after {
             width: 100%;
         }
@@ -83,73 +165,82 @@
         .nav-link-mobile.active {
             color: #f59e0b !important;
         }
+
+        /* Mobile menu background */
+        .mobile-menu-transparent {
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+
+        .mobile-menu-solid {
+            background-color: #000000 !important;
+        }
+
+        /* Hero Section - untuk memberi space di atas */
+        .hero-section {
+            margin-top: -72px;
+            padding-top: 72px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-section {
+                margin-top: -87px;
+                padding-top: 87px;
+            }
+        }
     </style>
 </head>
 
 <body class="flex flex-col min-h-screen">
     <!-- Navigation -->
-    <nav
-        class="w-full fixed z-50 flex items-center justify-center border-b border-white/10 bg-black/90 backdrop-blur-md h-[72px] md:h-[87px]">
+    <nav id="navbar"
+        class="navbar w-full fixed z-50 flex items-center justify-center border-b border-white/5 h-[72px] md:h-[87px]">
         <div class="w-full max-w-[1440px] flex items-center justify-between px-4 md:px-12 relative">
-            <!-- Logo (Kombinasi Merah dan Emas) -->
+            <!-- Logo -->
             <div class="flex items-center gap-1.5 z-50">
-                <div class="bg-red-700 rounded px-2 py-0.5">
-                    <span class="font-heading font-bold text-lg md:text-xl text-white">C</span>
-                </div>
-                <div class="flex flex-col items-start justify-start">
-                    <div class="bg-amber-500 rounded px-2 py-0.5">
-                        <span class="font-heading font-bold text-lg md:text-xl text-black">L</span>
-                    </div>
-                </div>
-                <div class="pb-1">
-                    <span
-                        class="font-heading text-xs md:text-sm text-[#bdbdbd] tracking-widest uppercase">Chalina</span>
-                </div>
+                <a href="#beranda" class="flex items-center">
+                    <img src="image/LOGO CLA.png" alt="PT Cahaya Lintang Abadi Logo"
+                        class="h-8 md:h-10 w-auto object-contain" />
+                </a>
             </div>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-8">
                 <a href="#beranda"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-red-400 transition-colors active-link"
+                    class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300 active"
                     data-nav="beranda">Beranda</a>
-                <a href="#tentang"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-red-400 transition-colors"
+                <a href="#tentang" class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="tentang">Tentang</a>
                 <a href="#visi-misi"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-amber-400 transition-colors"
+                    class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="visi-misi">Visi & Misi</a>
-                <a href="#layanan"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-red-400 transition-colors"
+                <a href="#layanan" class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="layanan">Layanan</a>
-                <a href="#galeri"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-amber-400 transition-colors"
+                <a href="#galeri" class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="galeri">Galeri</a>
                 <a href="#pengalaman"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-red-400 transition-colors"
+                    class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="pengalaman">Pengalaman</a>
-                <a href="#kontak"
-                    class="nav-link font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-amber-400 transition-colors"
+                <a href="#kontak" class="nav-link font-sans font-semibold text-xs pb-1 transition-colors duration-300"
                     data-nav="kontak">Kontak</a>
             </div>
 
             <div class="hidden lg:block">
                 <a href="#kontak"
-                    class="flex items-center justify-center border border-red-700 p-[1px] h-[41px] w-[147px] hover:bg-amber-500 hover:border-amber-500 transition-colors group">
-                    <span
-                        class="font-sans font-bold text-xs text-white group-hover:text-black transition-colors">Hubungi
-                        Kami</span>
+                    class="btn-hubungi flex items-center justify-center border p-[1px] h-[41px] w-[147px] transition-all duration-300">
+                    <span class="font-sans font-bold text-xs transition-colors duration-300">Hubungi Kami</span>
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn"
-                class="lg:hidden text-white hover:text-amber-500 transition-colors focus:outline-none p-2 z-50">
+                class="mobile-menu-btn lg:hidden text-white hover:text-amber-500 transition-colors focus:outline-none p-2 z-50">
                 <i class="fa-solid fa-bars fa-lg"></i>
             </button>
 
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu"
-                class="hidden absolute top-[72px] md:top-[87px] left-0 w-full bg-black border-b border-white/10 flex-col py-4 px-4 gap-4 lg:hidden shadow-xl">
+                class="hidden absolute top-[72px] md:top-[87px] left-0 w-full border-b border-white/10 flex-col py-4 px-4 gap-4 lg:hidden shadow-xl mobile-menu-transparent">
                 <a href="#beranda"
                     class="nav-link-mobile font-sans font-semibold text-sm text-[#bdbdbd] hover:text-red-400 active-link-mobile"
                     data-nav="beranda">Beranda</a>
@@ -181,7 +272,7 @@
 
     <!-- Hero Section -->
     <main
-        class="w-full flex items-center justify-center px-4 md:px-8 min-h-screen pt-24 pb-12 md:py-24 relative overflow-hidden"
+        class="hero-section w-full flex items-center justify-center px-4 md:px-8 min-h-screen pt-24 pb-12 md:py-24 relative overflow-hidden"
         id="beranda">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-neutral-950/80 mix-blend-multiply z-10"></div>
@@ -679,14 +770,12 @@
     <footer class="w-full bg-black pt-12 pb-8 px-4 md:px-8 flex flex-col items-center border-t border-white/10">
         <div class="max-w-7xl w-full flex flex-col md:flex-row justify-between gap-8 md:gap-12 mb-8 md:mb-12">
             <div class="max-w-sm">
-                <!-- Logo Kombinasi Merah & Emas -->
+                <!-- Logo Gambar di Footer -->
                 <div class="flex gap-1 items-center mb-5 md:mb-6">
-                    <div
-                        class="w-8 h-8 bg-red-700 flex items-center justify-center font-bold text-white text-base font-heading">
-                        C</div>
-                    <div
-                        class="w-8 h-8 bg-amber-500 flex items-center justify-center font-bold text-black text-base font-heading">
-                        L</div>
+                    <a href="#beranda" class="flex items-center gap-2">
+                        <img src="image/LOGO CLA.png" alt="PT Cahaya Lintang Abadi"
+                            class="h-8 md:h-10 w-auto object-contain" />
+                    </a>
                     <div class="text-lg font-bold tracking-widest ml-2 font-heading text-white uppercase">Chalina</div>
                 </div>
                 <p class="text-gray-400 font-light font-sans text-xs sm:text-sm mb-5 md:mb-6">
@@ -720,12 +809,13 @@
         </div>
     </footer>
 
-    <!-- Script Menu Mobile & Navbar Active -->
+    <!-- Script Menu Mobile & Navbar Active & Transparent -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // ========== MOBILE MENU TOGGLE ==========
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
+            const navbar = document.getElementById('navbar');
 
             if (btn && menu) {
                 btn.addEventListener('click', () => {
@@ -734,21 +824,50 @@
                 });
             }
 
+            // ========== NAVBAR TRANSPARENT ON SCROLL ==========
+            const heroSection = document.getElementById('beranda');
+
+            function updateNavbar() {
+                if (!heroSection) return;
+
+                const heroRect = heroSection.getBoundingClientRect();
+                const heroBottom = heroRect.bottom;
+
+                // Cek apakah masih di area hero (beranda)
+                const isInHero = heroBottom > 0;
+
+                if (isInHero) {
+                    // Transparan
+                    navbar.classList.remove('navbar-solid');
+                    navbar.classList.add('navbar-transparent');
+                    // Mobile menu background
+                    if (menu) {
+                        menu.classList.remove('mobile-menu-solid');
+                        menu.classList.add('mobile-menu-transparent');
+                    }
+                } else {
+                    // Solid
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.classList.add('navbar-solid');
+                    if (menu) {
+                        menu.classList.remove('mobile-menu-transparent');
+                        menu.classList.add('mobile-menu-solid');
+                    }
+                }
+            }
+
             // ========== NAVBAR ACTIVE STATE ==========
             const navLinks = document.querySelectorAll('.nav-link');
             const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
 
-            // Fungsi untuk menghapus semua active class
             function removeAllActive() {
                 navLinks.forEach(link => link.classList.remove('active'));
                 mobileNavLinks.forEach(link => link.classList.remove('active'));
             }
 
-            // Fungsi untuk menambahkan active class pada link yang sesuai dengan hash
             function setActiveLink(hash) {
                 removeAllActive();
 
-                // Desktop links
                 navLinks.forEach(link => {
                     const linkHash = link.getAttribute('href');
                     if (linkHash === hash) {
@@ -756,7 +875,6 @@
                     }
                 });
 
-                // Mobile links
                 mobileNavLinks.forEach(link => {
                     const linkHash = link.getAttribute('href');
                     if (linkHash === hash) {
@@ -765,7 +883,6 @@
                 });
             }
 
-            // Fungsi untuk menangani klik pada link
             function handleNavClick(e) {
                 e.preventDefault();
                 const href = this.getAttribute('href');
@@ -773,13 +890,11 @@
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
-                    // Close mobile menu jika terbuka
                     if (menu && !menu.classList.contains('hidden')) {
                         menu.classList.add('hidden');
                         menu.classList.remove('flex');
                     }
 
-                    // Scroll ke target dengan offset untuk navbar
                     const navHeight = document.querySelector('nav').offsetHeight;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
@@ -788,12 +903,10 @@
                         behavior: 'smooth'
                     });
 
-                    // Update active state
                     setActiveLink(href);
                 }
             }
 
-            // Event listener untuk semua nav link
             navLinks.forEach(link => {
                 link.addEventListener('click', handleNavClick);
             });
@@ -822,9 +935,11 @@
                 if (currentHash) {
                     setActiveLink(currentHash);
                 }
+
+                // Update navbar transparan
+                updateNavbar();
             }
 
-            // Throttle untuk performa
             let ticking = false;
             window.addEventListener('scroll', () => {
                 if (!ticking) {
@@ -836,7 +951,14 @@
                 }
             });
 
-            // Set active initial (default ke Beranda jika ada)
+            // ========== INITIAL STATE ==========
+            // Set navbar awal transparan
+            navbar.classList.add('navbar-transparent');
+            if (menu) {
+                menu.classList.add('mobile-menu-transparent');
+            }
+
+            // Set active initial
             if (window.location.hash) {
                 setActiveLink(window.location.hash);
             } else {
@@ -849,6 +971,9 @@
                     defaultMobileLink.classList.add('active');
                 }
             }
+
+            // Panggil sekali untuk initial state
+            updateNavbar();
 
             // ========== CLOSE MOBILE MENU ON RESIZE ==========
             window.addEventListener('resize', () => {
