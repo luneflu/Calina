@@ -17,80 +17,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <style>
-        :root {
-            --font-sans: "Inter", sans-serif;
-            --font-syne: "Syne", sans-serif;
-            --font-mono: "Inconsolata", monospace;
-        }
-
-        body {
-            background-color: #0b0b0b;
-            color: #f8f8f8;
-            font-family: var(--font-sans);
-        }
-
-        .font-syne {
-            font-family: var(--font-syne);
-        }
-
-        .font-mono {
-            font-family: var(--font-mono);
-        }
-
-        .font-sans {
-            font-family: var(--font-sans);
-        }
-
-        /* Placeholders */
-        .bg-placeholder-1 {
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("images/concrete-barrier.png") center/cover;
-        }
-
-        .bg-placeholder-2 {
-            background-color: #333;
-        }
-
-        .bg-placeholder-3 {
-            background-color: #444;
-        }
-
-        .bg-placeholder-4 {
-            background-color: #555;
-        }
-
-        .bg-placeholder-5 {
-            background-color: #666;
-        }
-
-        .bg-placeholder-6 {
-            background-color: #777;
-        }
-
-        .bg-placeholder-7 {
-            background-color: #888;
-        }
-
-        .bg-placeholder-8 {
-            background-color: #999;
-        }
-
-        .bg-placeholder-9 {
-            background-color: #222;
-        }
-
-        .bg-placeholder-10 {
-            background-color: #aaa;
-        }
-
-        .gallery-overlay {
-            background: linear-gradient(to top,
-                    rgba(0, 0, 0, 0.8) 0%,
-                    rgba(0, 0, 0, 0) 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -101,12 +28,12 @@
                 <a href="#beranda" class="flex items-center">
                     <img src="images/logo-cla.png" alt="PT Cahaya Lintang Abadi Logo"
                         class="h-8 md:h-10 w-auto object-contain" />
-                    <span class="brand-text text-white text-sm font-semibold ml-2 hidden md:inline">CAHAYA LINTANG
+                    <span class="brand-text text-white text-sm font-semibold ml-2">CAHAYA LINTANG
                         ABADI</span>
                 </a>
             </div>
 
-            <div class="flex items-center gap-8 hidden md:flex">
+            <div class="flex items-center gap-8 hidden lg:flex">
                 <a href="#"
                     class="font-sans font-semibold text-xs text-[#f8f8f8] border-b border-[#b71c1c] pb-1">Beranda</a>
                 <a href="#"
@@ -126,7 +53,7 @@
                     class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Kontak</a>
             </div>
 
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <a href="#"
                     class="flex items-center justify-center border border-[#b71c1c] p-[1px] h-[41px] w-[147px] hover:bg-[#b71c1c] transition-colors group">
                     <span class="font-sans font-bold text-xs text-[#f8f8f8]">Hubungi Kami</span>
@@ -134,14 +61,14 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2">
+            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none p-2">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu"
-            class="hidden absolute top-[87px] left-0 w-full bg-black border-b border-white/20 flex-col items-center py-6 gap-6 md:hidden">
+            class="hidden absolute top-[87px] left-0 w-full bg-black border-b border-white/20 flex-col items-center py-6 gap-6 lg:hidden">
             <a href="#" class="font-sans font-semibold text-sm text-[#f8f8f8]">Beranda</a>
             <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Tentang</a>
             <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Visi & Misi</a>
