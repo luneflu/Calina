@@ -15,7 +15,7 @@ class AdvantageCard extends HTMLElement {
           <h3 class="text-sm font-bold font-sans mb-1 text-white">
             ${title}
           </h3>
-          <p class="text-[#bdbdbd] font-light text-xs font-sans">
+          <p class="text-neutral-400 font-light text-xs font-sans">
             ${description}
           </p>
         </div>

@@ -14,28 +14,28 @@ class AppNavigation extends HTMLElement {
 
               <div class="flex items-center gap-8 hidden lg:flex">
                   <a href="#beranda"
-                      class="font-sans font-semibold text-xs text-[#f8f8f8] border-b border-[#b71c1c] pb-1">Beranda</a>
+                      class="font-sans font-semibold text-xs text-neutral-50 border-b border-red-700 pb-1">Beranda</a>
                   <a href="#tentang"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Tentang</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Tentang</a>
                   <a href="#visi-misi"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Visi
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Visi
                       & Misi</a>
                   <a href="#layanan"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Layanan</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Layanan</a>
                   <a href="#galeri"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Galeri</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Galeri</a>
                   <a href="#pengalaman"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Pengalaman</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Pengalaman</a>
                   <a href="#keunggulan"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Keunggulan</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Keunggulan</a>
                   <a href="#kontak"
-                      class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Kontak</a>
+                      class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Kontak</a>
               </div>
 
               <div class="hidden lg:block">
                   <a href="#kontak"
-                      class="flex items-center justify-center border border-[#b71c1c] p-[1px] h-[41px] w-[147px] hover:bg-[#b71c1c] transition-colors group">
-                      <span class="font-sans font-bold text-xs text-[#f8f8f8]">Hubungi Kami</span>
+                      class="flex items-center justify-center border border-red-700 p-[1px] h-[41px] w-[147px] hover:bg-red-700 transition-colors group">
+                      <span class="font-sans font-bold text-xs text-neutral-50">Hubungi Kami</span>
                   </a>
               </div>
 
@@ -48,16 +48,16 @@ class AppNavigation extends HTMLElement {
           <!-- Mobile Dropdown Menu -->
           <div id="mobile-menu"
               class="hidden absolute top-[87px] left-0 w-full bg-black border-b border-white/20 flex-col items-center py-6 gap-6 lg:hidden">
-              <a href="#beranda" class="font-sans font-semibold text-sm text-[#f8f8f8]">Beranda</a>
-              <a href="#tentang" class="font-sans font-semibold text-sm text-[#bdbdbd]">Tentang</a>
-              <a href="#visi-misi" class="font-sans font-semibold text-sm text-[#bdbdbd]">Visi & Misi</a>
-              <a href="#layanan" class="font-sans font-semibold text-sm text-[#bdbdbd]">Layanan</a>
-              <a href="#galeri" class="font-sans font-semibold text-sm text-[#bdbdbd]">Galeri</a>
-              <a href="#pengalaman" class="font-sans font-semibold text-sm text-[#bdbdbd]">Pengalaman</a>
-              <a href="#keunggulan" class="font-sans font-semibold text-sm text-[#bdbdbd]">Keunggulan</a>
-              <a href="#kontak" class="font-sans font-semibold text-sm text-[#bdbdbd]">Kontak</a>
+              <a href="#beranda" class="font-sans font-semibold text-sm text-neutral-50">Beranda</a>
+              <a href="#tentang" class="font-sans font-semibold text-sm text-neutral-400">Tentang</a>
+              <a href="#visi-misi" class="font-sans font-semibold text-sm text-neutral-400">Visi & Misi</a>
+              <a href="#layanan" class="font-sans font-semibold text-sm text-neutral-400">Layanan</a>
+              <a href="#galeri" class="font-sans font-semibold text-sm text-neutral-400">Galeri</a>
+              <a href="#pengalaman" class="font-sans font-semibold text-sm text-neutral-400">Pengalaman</a>
+              <a href="#keunggulan" class="font-sans font-semibold text-sm text-neutral-400">Keunggulan</a>
+              <a href="#kontak" class="font-sans font-semibold text-sm text-neutral-400">Kontak</a>
               <a href="#kontak"
-                  class="flex items-center justify-center border border-[#b71c1c] p-[1px] h-[41px] w-[147px] bg-[#b71c1c] text-white font-bold text-xs mt-4">Hubungi
+                  class="flex items-center justify-center border border-red-700 p-[1px] h-[41px] w-[147px] bg-red-700 text-white font-bold text-xs mt-4">Hubungi
                   Kami</a>
           </div>
       </nav>
@@ -130,22 +130,22 @@ class AppNavigation extends HTMLElement {
                 desktopLinks.forEach(link => {
                     const href = link.getAttribute('href');
                     if (href === `#${currentSectionId}`) {
-                        link.classList.remove('text-[#bdbdbd]');
-                        link.classList.add('text-[#f8f8f8]', 'border-b', 'border-[#b71c1c]');
+                        link.classList.remove('text-neutral-400');
+                        link.classList.add('text-neutral-50', 'border-b', 'border-red-700');
                     } else {
-                        link.classList.remove('text-[#f8f8f8]', 'border-b', 'border-[#b71c1c]');
-                        link.classList.add('text-[#bdbdbd]');
+                        link.classList.remove('text-neutral-50', 'border-b', 'border-red-700');
+                        link.classList.add('text-neutral-400');
                     }
                 });
 
                 mobileNavLinks.forEach(link => {
                     const href = link.getAttribute('href');
                     if (href === `#${currentSectionId}`) {
-                        link.classList.remove('text-[#bdbdbd]');
-                        link.classList.add('text-[#f8f8f8]');
+                        link.classList.remove('text-neutral-400');
+                        link.classList.add('text-neutral-50');
                     } else {
-                        link.classList.remove('text-[#f8f8f8]');
-                        link.classList.add('text-[#bdbdbd]');
+                        link.classList.remove('text-neutral-50');
+                        link.classList.add('text-neutral-400');
                     }
                 });
             }

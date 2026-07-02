@@ -10,7 +10,7 @@ class GalleryImage extends HTMLElement {
           ${imgHtml}
           <div class="absolute inset-0 gallery-overlay opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 z-10">
               <div>
-                  ${subtitle ? `<p class="text-[#bdbdbd] font-mono text-xs mb-1 uppercase tracking-wider">${subtitle}</p>` : ''}
+                  ${subtitle ? `<p class="text-neutral-400 font-mono text-xs mb-1 uppercase tracking-wider">${subtitle}</p>` : ''}
                   <p class="text-white font-bold">${title}</p>
               </div>
           </div>
