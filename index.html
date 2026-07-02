@@ -96,7 +96,7 @@
 <body class="flex flex-col min-h-screen">
     <!-- Navigation -->
     <nav class="w-full fixed z-90 flex items-center justify-center border-b border-white bg-black h-[87px]">
-        <div class="w-full max-w-[1440px] flex items-center justify-between px-12">
+        <div class="w-full max-w-[1440px] flex items-center justify-between px-4 md:px-12">
             <div class="flex items-center gap-1.5">
                 <a href="#beranda" class="flex items-center">
                     <img src="images/logo-cla.png" alt="PT Cahaya Lintang Abadi Logo"
@@ -126,17 +126,35 @@
                     class="font-sans font-semibold text-xs text-[#bdbdbd] pb-1 hover:text-white transition-colors">Kontak</a>
             </div>
 
-            <div>
+            <div class="hidden md:block">
                 <a href="#"
                     class="flex items-center justify-center border border-[#b71c1c] p-[1px] h-[41px] w-[147px] hover:bg-[#b71c1c] transition-colors group">
                     <span class="font-sans font-bold text-xs text-[#f8f8f8]">Hubungi Kami</span>
                 </a>
             </div>
+        
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden absolute top-[87px] left-0 w-full bg-black border-b border-white/20 flex-col items-center py-6 gap-6 md:hidden">
+            <a href="#" class="font-sans font-semibold text-sm text-[#f8f8f8]">Beranda</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Tentang</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Visi & Misi</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Layanan</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Galeri</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Pengalaman</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Keunggulan</a>
+            <a href="#" class="font-sans font-semibold text-sm text-[#bdbdbd]">Kontak</a>
+            <a href="#" class="flex items-center justify-center border border-[#b71c1c] p-[1px] h-[41px] w-[147px] bg-[#b71c1c] text-white font-bold text-xs mt-4">Hubungi Kami</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <main class="w-full flex items-center justify-center p-8 min-h-screen pt-24 pb-24 relative overflow-hidden">
+    <main class="w-full flex items-center justify-center p-4 md:p-8 min-h-screen pt-24 pb-24 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-zinc-900/50 mix-blend-multiply z-10"></div>
             <img src="images/labor-supply.png" alt="Hero Background" class="w-full h-full object-cover opacity-50" />
@@ -147,7 +165,7 @@
                 <div class="inline-block border-l border-red-500 font-mono text-sm px-3 py-1">
                     Perusahaan Tepercaya Pemeliharaan Infrastruktur
                 </div>
-                <h1 class="text-6xl md:text-7xl font-syne font-bold leading-tight">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-bold leading-tight">
                     Partner in <br />
                     <span
                         class="bg-gradient-to-r from-red-500 to-red-900 bg-clip-text text-transparent">Excellence.</span>
@@ -157,7 +175,7 @@
                     pemeliharaan jalan tol, pemeliharaan infrastruktur, jasa kebersihan,
                     dan penyediaan tenaga kerja handal.
                 </p>
-                <div class="flex gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#"
                         class="bg-red-700 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(183,28,28,0.2)] hover:opacity-90 transition-opacity">Hubungi
                         Kami</a>
@@ -202,16 +220,16 @@
     <hr class="border-t border-white/20" />
 
     <!-- Tentang Perusahaan Section -->
-    <section class="w-full flex justify-center py-24 px-8">
+    <section class="w-full flex justify-center py-16 md:py-24 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col md:flex-row gap-16 items-start">
             <div
-                class="w-full md:w-[523px] h-[502px] bg-placeholder-1 border border-white shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
+                class="w-full md:w-[523px] h-[300px] md:h-[502px] bg-placeholder-1 border border-white shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
             </div>
             <div class="flex-1 flex flex-col gap-6 pt-6">
                 <div class="text-red-600 font-mono text-xs px-3 py-1 self-start">
                     #1 // TENTANG PERUSAHAAN
                 </div>
-                <h2 class="text-5xl font-bold font-syne leading-tight">
+                <h2 class="text-3xl md:text-5xl font-bold font-syne leading-tight">
                     Dirancang untuk Ketangguhan
                 </h2>
                 <p class="text-base text-gray-400 font-sans max-w-2xl leading-relaxed">
@@ -253,17 +271,17 @@
     </section>
 
     <!-- Haluan Utama Section -->
-    <section class="w-full bg-neutral-900 border-y border-white/20 py-32 px-8 flex justify-center">
+    <section class="w-full bg-neutral-900 border-y border-white/20 py-16 md:py-32 px-4 md:px-8 flex justify-center">
         <div class="max-w-7xl w-full flex flex-col items-center">
             <div class="text-red-600 font-mono text-xs px-3 py-1 self-center">
                 #2 // HALUAN UTAMA
             </div>
-            <h2 class="text-5xl font-bold font-syne mt-4 mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center">
                 Visi & Misi Perusahaan
             </h2>
 
             <div class="flex flex-col md:flex-row w-full gap-0">
-                <div class="flex-1 bg-neutral-900 border border-white/20 p-12">
+                <div class="flex-1 bg-neutral-900 border border-white/20 p-8 md:p-12">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 border border-red-700 text-red-700 bg-red-700/10 flex items-center justify-center">
@@ -279,7 +297,7 @@
                     </p>
                 </div>
 
-                <div class="flex-1 border border-white/20 border-t-0 md:border-t border-l-0 md:border-l p-12">
+                <div class="flex-1 border border-white/20 border-t-0 md:border-t md:border-l-0 p-8 md:p-12">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 border border-red-700 text-red-700 bg-red-700/10 flex items-center justify-center">
@@ -313,14 +331,14 @@
     </section>
 
     <!-- Matriks Kapabilitas / Layanan Infrastruktur Section -->
-    <section class="w-full flex justify-center py-32 px-8">
+    <section class="w-full flex justify-center py-16 md:py-32 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col">
             <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
                 <div>
                     <div class="text-red-600 font-mono text-xs px-3 py-1 inline-block mb-3">
                         #3 // MATRIKS Kapabilitas
                     </div>
-                    <h2 class="text-5xl font-bold font-syne">Layanan Infrastruktur</h2>
+                    <h2 class="text-3xl md:text-5xl font-bold font-syne">Layanan Infrastruktur</h2>
                 </div>
                 <div class="border-l border-red-900 pl-4 max-w-sm">
                     <p class="text-gray-400 text-xs font-light font-sans leading-relaxed">
@@ -363,13 +381,13 @@
     </section>
 
     <!-- Rekam Visual / Galeri Section -->
-    <section class="w-full bg-neutral-900 py-32 px-8 flex justify-center">
+    <section class="w-full bg-neutral-900 py-16 md:py-32 px-4 md:px-8 flex justify-center">
         <div class="max-w-7xl w-full flex flex-col">
             <div class="mb-16">
                 <div class="text-red-600 font-mono text-xs px-3 py-1 inline-block mb-3">
                     #4 // REKAM VISUAL
                 </div>
-                <h2 class="text-5xl font-bold font-syne">Galeri Proyek Aktual</h2>
+                <h2 class="text-3xl md:text-5xl font-bold font-syne">Galeri Proyek Aktual</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -420,12 +438,12 @@
     </section>
 
     <!-- Parameter Operasional Section -->
-    <section class="w-full bg-neutral-900 py-32 px-8 flex justify-center border-t border-white/20">
+    <section class="w-full bg-neutral-900 py-16 md:py-32 px-4 md:px-8 flex justify-center border-t border-white/20">
         <div class="max-w-7xl w-full flex flex-col items-center">
             <div class="text-red-600 font-mono text-xs px-3 py-1 self-center">
                 #6 // PARAMETER OPERASIONAL
             </div>
-            <h2 class="text-5xl font-bold font-syne mt-4 mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center">
                 Nilai Keunggulan Kami
             </h2>
 
@@ -453,13 +471,13 @@
     </section>
 
     <!-- Pengalaman Proyek Historis Section -->
-    <section class="w-full flex justify-center py-32 px-8">
-        <div class="max-w-7xl w-full flex flex-col gap-24">
+    <section class="w-full flex justify-center py-16 md:py-32 px-4 md:px-8">
+        <div class="max-w-7xl w-full flex flex-col gap-10 md:gap-24">
             <div class="w-full">
                 <div class="text-red-600 font-mono text-xs px-3 py-1 inline-block mb-3">
                     #5 // REAL ASSET TRACK
                 </div>
-                <h2 class="text-5xl font-bold font-syne">
+                <h2 class="text-3xl md:text-5xl font-bold font-syne">
                     Pengalaman Proyek Historis
                 </h2>
             </div>
@@ -470,8 +488,8 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <!-- Item 1 -->
-                    <div class="relative pt-8 flex flex-col">
-                        <div class="text-white font-bold font-syne text-3xl mb-8 flex items-center">
+                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                        <div class="text-white font-bold font-syne text-3xl mb-4 md:mb-8 flex items-center">
                             2022
                         </div>
                         <div
@@ -489,8 +507,8 @@
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="relative pt-8 flex flex-col">
-                        <div class="text-white font-bold font-syne text-3xl mb-8 flex items-center">
+                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                        <div class="text-white font-bold font-syne text-3xl mb-4 md:mb-8 flex items-center">
                             2023
                         </div>
                         <div
@@ -508,8 +526,8 @@
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="relative pt-8 flex flex-col">
-                        <div class="text-white font-bold font-syne text-2xl mb-8 flex items-center h-[36px]">
+                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                        <div class="text-white font-bold font-syne text-2xl mb-4 md:mb-8 flex items-center md:h-[36px]">
                             2024–2025
                         </div>
                         <div
@@ -527,8 +545,8 @@
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="relative pt-8 flex flex-col">
-                        <div class="text-red-700 font-bold font-syne text-2xl mb-8 flex items-center h-[36px]">
+                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                        <div class="text-red-700 font-bold font-syne text-2xl mb-4 md:mb-8 flex items-center md:h-[36px]">
                             2025–2028
                         </div>
                         <div
@@ -550,14 +568,14 @@
     </section>
 
     <!-- Hubungi Kami Section -->
-    <section class="w-full bg-black flex justify-center py-32 px-8">
+    <section class="w-full bg-black flex justify-center py-16 md:py-32 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col lg:flex-row justify-between items-start gap-16">
             <!-- Left Column (Heading & Form) -->
             <div class="w-full lg:max-w-[757px] flex-1 flex flex-col gap-8">
                 <!-- Header -->
                 <div class="flex flex-col gap-2">
                     <span class="text-[#b71c1c] font-mono text-xs">07 // HUBUNGI KAMI</span>
-                    <h2 class="text-[#f8f8f8] font-syne text-[48px] font-bold leading-tight">Koneksi Enterprise</h2>
+                    <h2 class="text-[#f8f8f8] font-syne text-4xl md:text-[48px] font-bold leading-tight">Koneksi Enterprise</h2>
                 </div>
 
                 <!-- Form -->
@@ -655,15 +673,18 @@
 
     <!-- CTA Final Section -->
     <section
-        class="w-full bg-blend-overlay bg-black/70 py-40 px-8 flex justify-center text-center border-y border-[#b71c1c]/30 relative">
+        class="w-full bg-blend-overlay bg-black/70 py-20 md:py-40 px-4 md:px-8 flex justify-center text-center border-y border-[#b71c1c]/30 relative">
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 pointer-events-none"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-red-700 to-transparent pointer-events-none"></div>
         <div class="max-w-4xl w-full flex flex-col items-center relative z-10">
             <div class="text-white/70 font-mono text-sm mb-4 tracking-widest">
                 MAXIMUM NETWORK RESILIENCE
             </div>
-            <h2 class="text-5xl md:text-6xl font-bold font-syne mb-10 leading-tight text-white">
-                MENGAMANKAN INFRASTRUKTUR STRATEGIS NASIONAL
+            <h2 class="text-2xl sm:text-4xl md:text-6xl font-bold font-syne mb-10 leading-tight text-white flex flex-col md:block gap-2">
+                <span>MENGAMANKAN</span>
+                <span>INFRASTRUKTUR</span>
+                <span>STRATEGIS <span class="hidden md:inline">NASIONAL</span></span>
+                <span class="md:hidden">NASIONAL</span>
             </h2>
             <a href="#"
                 class="bg-red-700 text-white px-10 py-5 text-sm font-bold font-sans hover:bg-gray-200 uppercase tracking-wider transition-colors shadow-lg shadow-white/10">
@@ -671,7 +692,7 @@
             </a>
         </div>
     </section>
-    <footer class="w-full bg-[#060606] pt-20 pb-10 px-8 flex flex-col items-center border-t border-white/10">
+    <footer class="w-full bg-[#060606] pt-16 pb-10 px-4 md:px-8 flex flex-col items-center border-t border-white/10">
         <div class="w-full max-w-[1440px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div class="flex flex-col gap-4">
                 <div class="flex items-center gap-1.5">
@@ -762,6 +783,26 @@
     <script type="module" src="./js/components/advantage-card.js"></script>
     <script type="module" src="./js/components/gallery-image.js"></script>
     <script type="module" src="./js/layouts/app-footer.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
