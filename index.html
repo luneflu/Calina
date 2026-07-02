@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="image/LOGO CLA.png" type="image/png">
+    <!-- PERBAIKI: Favicon -->
+    <link rel="icon" href="image/logo-cla.png" type="image/png">
     <title>PT Cahaya Lintang Abadi - Partner In Excellence</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -44,8 +45,7 @@
         /* Placeholders */
         .bg-placeholder-1 {
             background:
-             linear-gradient(rgba(0, 0, 0, 0.7
-             ), rgba(0, 0, 0, 0.7)),
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url("image/jalan.jpg") center/cover;
         }
 
@@ -62,7 +62,6 @@
             border-bottom-color: rgba(255, 255, 255, 0.05);
         }
 
-        /* Navbar Solid saat di-scroll atau di section lain */
         .navbar-solid {
             background-color: rgba(0, 0, 0, 0.95) !important;
             backdrop-filter: blur(12px) !important;
@@ -70,7 +69,6 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* ========== NAVBAR TRANSPARENT - TEXT COLORS ========== */
         .navbar-transparent .nav-link {
             color: rgba(255, 255, 255, 0.9) !important;
         }
@@ -106,7 +104,6 @@
             color: #ffffff !important;
         }
 
-        /* ========== NAVBAR SOLID - TEXT COLORS ========== */
         .navbar-solid .nav-link {
             color: #bdbdbd !important;
         }
@@ -142,7 +139,6 @@
             color: #ffffff !important;
         }
 
-        /* ========== NAVBAR ACTIVE LINK STYLES ========== */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -167,7 +163,6 @@
             color: #f59e0b !important;
         }
 
-        /* Mobile menu background */
         .mobile-menu-transparent {
             background-color: rgba(0, 0, 0, 0.95) !important;
             backdrop-filter: blur(12px) !important;
@@ -177,7 +172,6 @@
             background-color: #000000 !important;
         }
 
-        /* Hero Section - untuk memberi space di atas */
         .hero-section {
             margin-top: -72px;
             padding-top: 72px;
@@ -197,12 +191,13 @@
     <nav id="navbar"
         class="navbar w-full fixed z-50 flex items-center justify-center border-b border-white/5 h-[72px] md:h-[87px]">
         <div class="w-full max-w-[1440px] flex items-center justify-between px-4 md:px-12 relative">
-            <!-- Logo -->
+            <!-- Logo - PERBAIKI -->
             <div class="flex items-center gap-1.5 z-50">
                 <a href="#beranda" class="flex items-center">
                     <img src="image/logo-cla.png" alt="PT Cahaya Lintang Abadi Logo"
                         class="h-8 md:h-10 w-auto object-contain" />
-                    <span class="brand-text">CAHAYA LINTANG ABADI</span>
+                    <span class="brand-text text-white text-sm font-semibold ml-2 hidden md:inline">CAHAYA LINTANG
+                        ABADI</span>
                 </a>
             </div>
 
@@ -272,19 +267,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - PERBAIKI -->
     <main
         class="hero-section w-full flex items-center justify-center px-4 md:px-8 min-h-screen pt-24 pb-12 md:py-24 relative overflow-hidden"
         id="beranda">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-neutral-950/80 mix-blend-multiply z-10"></div>
-            <img src="image/tenaga.PNG" alt="Hero Background" class="w-full h-full object-cover opacity-100" />
+            <img src="image/tenaga.png" alt="Hero Background" class="w-full h-full object-cover opacity-100" />
         </div>
 
         <div
             class="max-w-7xl w-full flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-between relative z-10">
             <div class="flex-1 space-y-4 md:space-y-6 text-center lg:text-left mt-8 lg:mt-0">
-                <!-- Tag Border Merah, Teks Emas -->
                 <div
                     class="inline-block border-l-2 border-red-600 text-amber-500 font-mono text-[10px] sm:text-xs md:text-sm px-3 py-1 bg-black/40 backdrop-blur-sm tracking-wide">
                     Perusahaan Tepercaya Pemeliharaan Infrastruktur
@@ -292,7 +286,6 @@
                 <h1
                     class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight tracking-tight">
                     Partner in <br class="hidden md:block" />
-                    <!-- Gradien Merah ke Kuning -->
                     <span
                         class="bg-gradient-to-r from-red-600 to-amber-400 bg-clip-text text-transparent">Excellence.</span>
                 </h1>
@@ -313,7 +306,6 @@
             </div>
 
             <div class="flex-1 flex flex-col gap-3 md:gap-4 w-full max-w-md">
-                <!-- Box 1: Aksen Merah -->
                 <div
                     class="border border-white/10 p-4 md:p-6 flex justify-between items-center bg-white/5 backdrop-blur-md hover:border-red-500/50 transition-colors">
                     <div>
@@ -324,7 +316,6 @@
                     </div>
                     <i class="fa-solid fa-building text-xl sm:text-2xl md:text-3xl text-red-600/80"></i>
                 </div>
-                <!-- Box 2: Aksen Emas -->
                 <div
                     class="border border-white/10 p-4 md:p-6 flex justify-between items-center bg-white/5 backdrop-blur-md hover:border-amber-500/50 transition-colors">
                     <div>
@@ -335,7 +326,6 @@
                     </div>
                     <i class="fa-solid fa-cogs text-xl sm:text-2xl md:text-3xl text-amber-500/80"></i>
                 </div>
-                <!-- Box 3: Aksen Merah -->
                 <div
                     class="border border-white/10 p-4 md:p-6 flex justify-between items-center bg-white/5 backdrop-blur-md hover:border-red-500/50 transition-colors">
                     <div>
@@ -357,8 +347,7 @@
         <div class="max-w-7xl w-full flex flex-col lg:flex-row gap-8 md:gap-16 items-start">
             <div
                 class="w-full lg:w-[523px] h-[260px] sm:h-[350px] md:h-[502px] bg-placeholder-1 border border-white/10 shadow-2xl relative">
-                <!-- Aksen Garis -->
-                <img src="image/CONCRETE-BARRIER.PNG" alt="Concrete Barrier" class="w-full h-full object-cover" />
+                <img src="image/concrete-barrier.png" alt="Concrete Barrier" class="w-full h-full object-cover" />
                 <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-amber-500"></div>
                 <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-red-600"></div>
             </div>
@@ -424,7 +413,6 @@
             </h2>
 
             <div class="flex flex-col md:flex-row w-full gap-0 shadow-2xl">
-                <!-- VISI (Tema Merah) -->
                 <div
                     class="flex-1 bg-neutral-950 border border-white/10 p-6 sm:p-8 md:p-12 border-t-2 border-t-red-600">
                     <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -442,7 +430,6 @@
                     </p>
                 </div>
 
-                <!-- MISI (Tema Emas) -->
                 <div
                     class="flex-1 bg-neutral-900 border border-white/10 border-t-2 md:border-t-2 border-t-amber-500 md:border-l-0 p-6 sm:p-8 md:p-12">
                     <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -475,7 +462,7 @@
         </div>
     </section>
 
-    <!-- Matriks Kapabilitas Section -->
+    <!-- Matriks Kapabilitas Section - PERBAIKI SEMUA SRC -->
     <section class="w-full flex justify-center py-12 md:py-32 px-4 md:px-8" id="layanan">
         <div class="max-w-7xl w-full flex flex-col">
             <div
@@ -496,41 +483,39 @@
                 </div>
             </div>
 
-            <!-- Kartu dengan kombinasi warna (dianggap di-handle di komponen web, atau layout gridnya di sini) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border border-white/10">
-                <!-- Layanan Section - Update semua src -->
                 <service-card title="Toll Road Maintenance"
                     description="Perbaikan struktural rutin, pemeliharaan perkerasan jalan tol, dan patching aspal pada jalur koridor utama logistik lintas provinsi."
                     src="image/aspal.png"></service-card>
-                
+
                 <service-card title="Traffic Cleaning Service"
                     description="Pekerjaan mekanis rehabilitasi, pemasangan, dan penyelarasan struktur sambungan siar muai pada jembatan dan jalan layang."
                     src="image/traffic-cs.png"></service-card>
-                
+
                 <service-card title="Traffic Sign Cleaning"
                     description="Pembersihan berkala rambu lalu lintas, reflektor pembatas jalan, untuk menjamin visibilitas aman bagi pengendara."
                     src="image/traffic-sign.png"></service-card>
-                
+
                 <service-card title="Road Cleaning"
                     description="Pembersihan area perkerasan jalan tol dari sisa puing, debu makadam, vegetasi liar merayap demi kelancaran laju kendaraan."
                     src="image/road-cleaning.png"></service-card>
-                
+
                 <service-card title="Garden Maintenance"
                     description="Penataan arsitektur lanskap hijau, perawatan tanaman media jalan, pemotongan kurap di sepanjang koridor rumija jalan tol."
                     src="image/garden.png"></service-card>
-                
+
                 <service-card title="Drainage System Cleaning"
                     description="Normalisasi, pembersihan sedimen lumpur, dan pembersihan sampah pada saluran air semen (u-ditch) penunjang badan jalan."
                     src="image/drainase.png"></service-card>
-                
+
                 <service-card title="Concrete Barrier Cleaning"
                     description="Pembersihan mekanis beton pembatas jalur (movable concrete barrier) guna menjaga visibilitas marka regulasi tetap bersih."
                     src="image/concrete-barrier.png"></service-card>
-                
+
                 <service-card title="Bronjong Works"
                     description="Pemasangan anyaman kawat baja berlapis seng dengan isi batu (gabion) untuk penahan tebing rawan longsor di tepi jalur arteri."
                     src="image/bronjong.png"></service-card>
-                
+
                 <service-card title="Penyedia Tenaga Kerja"
                     description="Penyediaan dan manajemen terintegrasi tim operasional lapangan tangguh bersertifikasi khusus untuk industri konstruksi berat."
                     src="image/tenaga.png"></service-card>
@@ -589,13 +574,10 @@
             </div>
 
             <div class="w-full relative">
-                <!-- Desktop Horizontal Line -->
                 <div class="absolute top-0 left-0 w-full h-[1px] bg-white/20 hidden md:block"></div>
-                <!-- Mobile Vertical Line -->
                 <div class="absolute left-[11px] top-0 bottom-0 w-[1px] bg-white/20 md:hidden"></div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 ml-6 md:ml-0 relative">
-                    <!-- Item 1 (Merah) -->
                     <div class="relative pt-1 md:pt-8 flex flex-col">
                         <div
                             class="text-white font-bold font-heading text-xl sm:text-2xl md:text-3xl mb-2 md:mb-8 flex items-center md:h-[36px]">
@@ -604,7 +586,6 @@
                         <div
                             class="absolute -left-[30px] md:left-0 top-[14px] md:top-0 w-3 h-3 bg-red-600 rounded-full transform md:-translate-y-1/2 ring-4 ring-black">
                         </div>
-
                         <div
                             class="border border-white/10 border-t-red-600 bg-[#0d0d0d] p-5 flex-1 hover:border-red-500/50 transition-colors">
                             <h3 class="text-white font-bold text-[11px] sm:text-xs mb-3 font-heading tracking-wide">
@@ -616,7 +597,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 2 (Emas) -->
                     <div class="relative pt-1 md:pt-8 flex flex-col">
                         <div
                             class="text-white font-bold font-heading text-xl sm:text-2xl md:text-3xl mb-2 md:mb-8 flex items-center md:h-[36px]">
@@ -625,7 +605,6 @@
                         <div
                             class="absolute -left-[30px] md:left-0 top-[14px] md:top-0 w-3 h-3 bg-amber-500 rounded-full transform md:-translate-y-1/2 ring-4 ring-black">
                         </div>
-
                         <div
                             class="border border-white/10 border-t-amber-500 bg-[#0d0d0d] p-5 flex-1 hover:border-amber-500/50 transition-colors">
                             <h3 class="text-white font-bold text-[11px] sm:text-xs mb-3 font-heading tracking-wide">
@@ -637,7 +616,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 3 (Merah) -->
                     <div class="relative pt-1 md:pt-8 flex flex-col">
                         <div
                             class="text-white font-bold font-heading text-xl sm:text-2xl md:text-3xl mb-2 md:mb-8 flex items-center h-[36px]">
@@ -646,7 +624,6 @@
                         <div
                             class="absolute -left-[30px] md:left-0 top-[14px] md:top-0 w-3 h-3 bg-red-600 rounded-full transform md:-translate-y-1/2 ring-4 ring-black">
                         </div>
-
                         <div
                             class="border border-white/10 border-t-red-600 bg-[#0d0d0d] p-5 flex-1 hover:border-red-500/50 transition-colors">
                             <h3 class="text-white font-bold text-[11px] sm:text-xs mb-3 font-heading tracking-wide">
@@ -658,7 +635,6 @@
                         </div>
                     </div>
 
-                    <!-- Item 4 (Highlight Emas) -->
                     <div class="relative pt-1 md:pt-8 flex flex-col">
                         <div
                             class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-300 font-bold font-heading text-xl sm:text-2xl md:text-3xl mb-2 md:mb-8 flex items-center h-[36px]">
@@ -667,7 +643,6 @@
                         <div
                             class="absolute -left-[30px] md:left-0 top-[14px] md:top-0 w-3 h-3 bg-amber-500 rounded-full transform md:-translate-y-1/2 ring-4 ring-black shadow-[0_0_10px_rgba(245,158,11,0.5)]">
                         </div>
-
                         <div
                             class="border border-amber-500/40 bg-gradient-to-br from-amber-500/10 to-transparent p-5 flex-1">
                             <h3 class="text-amber-500 font-bold text-[11px] sm:text-xs mb-3 font-heading tracking-wide">
@@ -712,7 +687,6 @@
 
             <div
                 class="w-full lg:w-2/3 border border-white/10 p-6 sm:p-8 md:p-12 bg-neutral-900 shadow-2xl relative overflow-hidden">
-                <!-- Aksen Garis Gradien di atas form -->
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-amber-500"></div>
                 <form class="flex flex-col gap-6 sm:gap-8" onsubmit="event.preventDefault()">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
@@ -740,7 +714,6 @@
                             class="bg-transparent border-b border-white/20 pb-2 text-xs sm:text-sm text-white font-sans focus:outline-none focus:border-red-500 transition-colors resize-none mt-1 rounded-none"></textarea>
                     </div>
 
-                    <!-- Mobile-only Info Office -->
                     <div class="flex items-start gap-4 mt-2 lg:hidden border-t border-white/10 pt-6">
                         <i class="fa-solid fa-building text-red-500 mt-1"></i>
                         <div>
@@ -750,7 +723,6 @@
                         </div>
                     </div>
 
-                    <!-- Tombol Form dengan Gradien -->
                     <button type="submit"
                         class="bg-gradient-to-r from-red-700 to-amber-600 text-white px-6 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold tracking-wider hover:from-red-600 hover:to-amber-500 transition-colors self-start mt-2 w-full sm:w-auto uppercase shadow-[0_4px_15px_rgba(245,158,11,0.2)]">
                         Kirim Pesan
@@ -779,13 +751,13 @@
         </div>
     </section>
 
+    <!-- Footer - PERBAIKI -->
     <footer class="w-full bg-black pt-12 pb-8 px-4 md:px-8 flex flex-col items-center border-t border-white/10">
         <div class="max-w-7xl w-full flex flex-col md:flex-row justify-between gap-8 md:gap-12 mb-8 md:mb-12">
             <div class="max-w-sm">
-                <!-- Logo Gambar di Footer -->
                 <div class="flex gap-1 items-center mb-5 md:mb-6">
                     <a href="#beranda" class="flex items-center gap-2">
-                        <img src="image/LOGO CLA.png" alt="PT Cahaya Lintang Abadi"
+                        <img src="image/logo-cla.png" alt="PT Cahaya Lintang Abadi"
                             class="h-8 md:h-10 w-auto object-contain" />
                     </a>
                     <div class="text-lg font-bold tracking-widest ml-2 font-heading text-white uppercase">Chalina</div>
@@ -821,10 +793,9 @@
         </div>
     </footer>
 
-    <!-- Script Menu Mobile & Navbar Active & Transparent -->
+    <!-- Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // ========== MOBILE MENU TOGGLE ==========
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             const navbar = document.getElementById('navbar');
@@ -836,29 +807,22 @@
                 });
             }
 
-            // ========== NAVBAR TRANSPARENT ON SCROLL ==========
             const heroSection = document.getElementById('beranda');
 
             function updateNavbar() {
                 if (!heroSection) return;
-
                 const heroRect = heroSection.getBoundingClientRect();
                 const heroBottom = heroRect.bottom;
-
-                // Cek apakah masih di area hero (beranda)
                 const isInHero = heroBottom > 0;
 
                 if (isInHero) {
-                    // Transparan
                     navbar.classList.remove('navbar-solid');
                     navbar.classList.add('navbar-transparent');
-                    // Mobile menu background
                     if (menu) {
                         menu.classList.remove('mobile-menu-solid');
                         menu.classList.add('mobile-menu-transparent');
                     }
                 } else {
-                    // Solid
                     navbar.classList.remove('navbar-transparent');
                     navbar.classList.add('navbar-solid');
                     if (menu) {
@@ -868,7 +832,6 @@
                 }
             }
 
-            // ========== NAVBAR ACTIVE STATE ==========
             const navLinks = document.querySelectorAll('.nav-link');
             const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
 
@@ -879,14 +842,12 @@
 
             function setActiveLink(hash) {
                 removeAllActive();
-
                 navLinks.forEach(link => {
                     const linkHash = link.getAttribute('href');
                     if (linkHash === hash) {
                         link.classList.add('active');
                     }
                 });
-
                 mobileNavLinks.forEach(link => {
                     const linkHash = link.getAttribute('href');
                     if (linkHash === hash) {
@@ -906,15 +867,12 @@
                         menu.classList.add('hidden');
                         menu.classList.remove('flex');
                     }
-
                     const navHeight = document.querySelector('nav').offsetHeight;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
                     });
-
                     setActiveLink(href);
                 }
             }
@@ -922,33 +880,26 @@
             navLinks.forEach(link => {
                 link.addEventListener('click', handleNavClick);
             });
-
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', handleNavClick);
             });
 
-            // ========== DETECT ACTIVE SECTION ON SCROLL ==========
             const sections = document.querySelectorAll('section[id], main[id]');
 
             function updateActiveOnScroll() {
                 const navHeight = document.querySelector('nav').offsetHeight;
                 let currentHash = '';
-
                 sections.forEach(section => {
                     const rect = section.getBoundingClientRect();
                     const sectionTop = rect.top - navHeight - 50;
                     const sectionBottom = rect.bottom - navHeight;
-
                     if (sectionTop <= 0 && sectionBottom >= 0) {
                         currentHash = '#' + section.id;
                     }
                 });
-
                 if (currentHash) {
                     setActiveLink(currentHash);
                 }
-
-                // Update navbar transparan
                 updateNavbar();
             }
 
@@ -963,14 +914,11 @@
                 }
             });
 
-            // ========== INITIAL STATE ==========
-            // Set navbar awal transparan
             navbar.classList.add('navbar-transparent');
             if (menu) {
                 menu.classList.add('mobile-menu-transparent');
             }
 
-            // Set active initial
             if (window.location.hash) {
                 setActiveLink(window.location.hash);
             } else {
@@ -984,10 +932,8 @@
                 }
             }
 
-            // Panggil sekali untuk initial state
             updateNavbar();
 
-            // ========== CLOSE MOBILE MENU ON RESIZE ==========
             window.addEventListener('resize', () => {
                 if (window.innerWidth >= 1024 && menu && !menu.classList.contains('hidden')) {
                     menu.classList.add('hidden');
