@@ -16,7 +16,7 @@ class ServiceCard extends HTMLElement {
                       ${description}
                   </p>
               </div>
-              <a href="${link}" class="text-right text-red-700 font-bold font-mono group-hover:translate-x-2 transition-transform inline-block">
+              <a href="${link}" class="text-right text-yellow-500 font-bold font-mono group-hover:translate-x-2 transition-transform inline-block">
                   &rarr;
               </a>
           </div>

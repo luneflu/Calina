@@ -5,9 +5,9 @@ class AdvantageCard extends HTMLElement {
     const icon = this.getAttribute("icon") || "";
 
     this.innerHTML = /*html*/`
-      <div class="p-8 flex flex-col justify-between border border-transparent hover:border-red-700 transition-colors bg-black/20 group h-[200px]">
+      <div class="p-8 flex flex-col justify-between border border-transparent hover:border-yellow-500 transition-colors bg-black/20 group h-[200px]">
         <div class="flex justify-between items-start">
-          <div class="text-2xl text-red-700 group-hover:scale-110 transition-transform">
+          <div class="text-2xl text-yellow-500 group-hover:scale-110 transition-transform">
             <i class="${icon}"></i>
           </div>
         </div>

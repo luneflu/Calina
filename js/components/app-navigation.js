@@ -14,7 +14,7 @@ class AppNavigation extends HTMLElement {
 
               <div class="flex items-center gap-8 hidden lg:flex">
                   <a href="#beranda"
-                      class="font-sans font-semibold text-xs text-neutral-50 border-b border-red-700 pb-1">Beranda</a>
+                      class="font-sans font-semibold text-xs text-neutral-50 border-b border-yellow-500 pb-1">Beranda</a>
                   <a href="#tentang"
                       class="font-sans font-semibold text-xs text-neutral-400 pb-1 hover:text-white transition-colors">Tentang</a>
                   <a href="#visi-misi"
@@ -34,7 +34,7 @@ class AppNavigation extends HTMLElement {
 
               <div class="hidden lg:block">
                   <a href="#kontak"
-                      class="flex items-center justify-center border border-red-700 p-[1px] h-[41px] w-[147px] hover:bg-red-700 transition-colors group">
+                      class="flex items-center justify-center border border-yellow-500 p-[1px] h-[41px] w-[147px] hover:bg-yellow-500 transition-colors group">
                       <span class="font-sans font-bold text-xs text-neutral-50">Hubungi Kami</span>
                   </a>
               </div>
@@ -57,7 +57,7 @@ class AppNavigation extends HTMLElement {
               <a href="#keunggulan" class="font-sans font-semibold text-sm text-neutral-400">Keunggulan</a>
               <a href="#kontak" class="font-sans font-semibold text-sm text-neutral-400">Kontak</a>
               <a href="#kontak"
-                  class="flex items-center justify-center border border-red-700 p-[1px] h-[41px] w-[147px] bg-red-700 text-white font-bold text-xs mt-4">Hubungi
+                  class="flex items-center justify-center border border-yellow-500 p-[1px] h-[41px] w-[147px] bg-yellow-500 text-white font-bold text-xs mt-4">Hubungi
                   Kami</a>
           </div>
       </nav>
@@ -131,9 +131,9 @@ class AppNavigation extends HTMLElement {
                     const href = link.getAttribute('href');
                     if (href === `#${currentSectionId}`) {
                         link.classList.remove('text-neutral-400');
-                        link.classList.add('text-neutral-50', 'border-b', 'border-red-700');
+                        link.classList.add('text-neutral-50', 'border-b', 'border-yellow-500');
                     } else {
-                        link.classList.remove('text-neutral-50', 'border-b', 'border-red-700');
+                        link.classList.remove('text-neutral-50', 'border-b', 'border-yellow-500');
                         link.classList.add('text-neutral-400');
                     }
                 });
