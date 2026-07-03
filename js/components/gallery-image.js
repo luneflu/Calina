@@ -3,7 +3,7 @@ class GalleryImage extends HTMLElement {
     const title = this.getAttribute('title') || '';
     const subtitle = this.getAttribute('subtitle') || '';
     const src = this.getAttribute('src');
-    const imgHtml = src ? `<img src="${src}" alt="${title}" class="absolute inset-0 w-full h-full object-cover z-0">` : '';
+    const imgHtml = src ? `<img src="${src}" alt="${title}" class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy">` : '';
 
     this.innerHTML = /*html*/`
       <div class="relative w-full h-[347px] border border-white/20 group overflow-hidden">

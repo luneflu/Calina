@@ -4,7 +4,7 @@ class ServiceCard extends HTMLElement {
     const description = this.getAttribute('description') || '';
     const link = this.getAttribute('link') || '#';
     const src = this.getAttribute('src');
-    const imgHtml = src ? `<img src="${src}" alt="${title}" class="w-full h-full object-cover">` : '';
+    const imgHtml = src ? `<img src="${src}" alt="${title}" class="w-full h-full object-cover" loading="lazy">` : '';
 
     this.innerHTML = /*html*/`
       <div class="bg-neutral-900 border border-white/10 flex flex-col h-[381px] group m-4">

@@ -6,7 +6,7 @@ class AppNavigation extends HTMLElement {
               <div class="flex items-center gap-1.5">
                   <a href="#beranda" class="flex items-center">
                       <img src="images/logo-cla.png" alt="PT Cahaya Lintang Abadi Logo"
-                          class="h-8 md:h-10 w-auto object-contain" />
+                          class="h-8 md:h-10 w-auto object-contain" loading="lazy" />
                       <span class="brand-text text-white text-sm font-semibold ml-2">CAHAYA LINTANG
                           ABADI</span>
                   </a>
