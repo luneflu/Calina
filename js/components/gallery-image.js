@@ -16,6 +16,13 @@ class GalleryImage extends HTMLElement {
           </div>
       </div>
     `;
+
+    this.style.cursor = 'pointer';
+    this.addEventListener('click', () => {
+      if (window.openLightbox) {
+        window.openLightbox(this);
+      }
+    });
   }
 }
 customElements.define('gallery-image', GalleryImage);

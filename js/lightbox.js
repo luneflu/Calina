@@ -11,7 +11,7 @@ window.openLightbox = function(element) {
 
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt || 'Galeri Proyek';
-    caption.textContent = `${subtitle} — ${title}`;
+    caption.textContent = subtitle ? `${subtitle} — ${title}` : title;
 
     lightbox.classList.remove('hidden');
     lightbox.classList.add('flex');

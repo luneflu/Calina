@@ -16,12 +16,19 @@ class ServiceCard extends HTMLElement {
                       ${description}
                   </p>
               </div>
-              <a href="${link}" class="text-right text-yellow-500 font-bold font-mono group-hover:translate-x-2 transition-transform inline-block">
+              <a href="${link}" class="text-right text-yellow-500 font-bold font-mono group-hover:translate-x-2 transition-transform inline-block" onclick="event.preventDefault();">
                   &rarr;
               </a>
           </div>
       </div>
     `;
+
+    this.style.cursor = 'pointer';
+    this.addEventListener('click', () => {
+      if (window.openLightbox) {
+        window.openLightbox(this);
+      }
+    });
   }
 }
 customElements.define('service-card', ServiceCard);
