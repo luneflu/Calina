@@ -16,11 +16,12 @@
         href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen overflow-x-hidden">
     <!-- Navigation -->
     <app-navigation></app-navigation>
 
@@ -35,20 +36,20 @@
 
         <div class="max-w-7xl w-full flex flex-col lg:flex-row gap-16 items-center justify-between relative z-10">
             <div class="flex-1 space-y-8">
-                <div class="inline-block border-l border-yellow-400 font-mono text-sm px-3 py-1">
+                <div class="inline-block border-l border-yellow-400 font-mono text-sm px-3 py-1" data-aos="fade-up">
                     Perusahaan Tepercaya Pemeliharaan Infrastruktur
                 </div>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-bold leading-tight">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-bold leading-tight" data-aos="fade-up" data-aos-delay="100">
                     Partner in <br />
                     <span
                         class="bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">Excellence.</span>
                 </h1>
-                <p class="text-lg max-w-xl font-sans">
+                <p class="text-lg max-w-xl font-sans" data-aos="fade-up" data-aos-delay="200">
                     Layanan berskala nasional dan profesional di bidang konstruksi,
                     pemeliharaan jalan tol, pemeliharaan infrastruktur, jasa kebersihan,
                     dan penyediaan tenaga kerja handal.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
                     <a href="#kontak"
                         class="bg-yellow-500 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(234,179,8,0.25)] hover:opacity-90 transition-opacity">Hubungi
                         Kami</a>
@@ -59,7 +60,7 @@
             </div>
 
             <div class="flex-1 flex flex-col gap-6 w-full lg:max-w-md">
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5">
+                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="400">
                     <div>
                         <div class="text-4xl font-bold font-syne">2021</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">
@@ -68,7 +69,7 @@
                     </div>
                     <i class="fa-solid fa-building text-3xl text-yellow-400/80"></i>
                 </div>
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5">
+                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="500">
                     <div>
                         <div class="text-4xl font-bold font-syne">9+</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">
@@ -77,7 +78,7 @@
                     </div>
                     <i class="fa-solid fa-cogs text-3xl text-yellow-400/80"></i>
                 </div>
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5">
+                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="600">
                     <div>
                         <div class="text-4xl font-bold font-syne">Nasional</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">
@@ -97,8 +98,8 @@
         <div class="max-w-7xl w-full flex flex-col md:flex-row gap-16 items-start">
             <img src="images/concrete-barrier.png" alt="Tentang PT Cahaya Lintang Abadi"
                 class="w-full md:w-[523px] h-[300px] md:h-[502px] object-cover border border-white shadow-[0_25px_50px_rgba(0,0,0,0.25)]"
-                loading="lazy" />
-            <div class="flex-1 flex flex-col gap-6 pt-6">
+                loading="lazy" data-aos="fade-right" />
+            <div class="flex-1 flex flex-col gap-6 pt-6" data-aos="fade-left">
                 <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-start">
                     #1 // TENTANG PERUSAHAAN
                 </div>
@@ -147,15 +148,14 @@
     <section id="visi-misi"
         class="w-full bg-neutral-900 border-y border-white/20 py-16 md:py-32 px-4 md:px-8 flex justify-center">
         <div class="max-w-7xl w-full flex flex-col items-center">
-            <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-center">
+            <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-center" data-aos="fade-up">
                 #2 // HALUAN UTAMA
             </div>
-            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center" data-aos="fade-up" data-aos-delay="100">
                 Visi & Misi Perusahaan
             </h2>
-
             <div class="flex flex-col md:flex-row w-full gap-0">
-                <div class="flex-1 bg-neutral-900 border border-white/20 p-8 md:p-12">
+                <div class="flex-1 bg-neutral-900 border border-white/20 p-8 md:p-12" data-aos="fade-right">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 border border-yellow-500 text-yellow-500 bg-yellow-500/10 flex items-center justify-center">
@@ -171,7 +171,7 @@
                     </p>
                 </div>
 
-                <div class="flex-1 border border-white/20 border-t-0 md:border-t md:border-l-0 p-8 md:p-12">
+                <div class="flex-1 border border-white/20 border-t-0 md:border-t md:border-l-0 p-8 md:p-12" data-aos="fade-left">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 border border-yellow-500 text-yellow-500 bg-yellow-500/10 flex items-center justify-center">
@@ -208,13 +208,13 @@
     <section id="layanan" class="w-full flex justify-center py-16 md:py-32 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col">
             <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
-                <div>
+                <div data-aos="fade-right">
                     <div class="text-yellow-400 font-mono text-xs px-3 py-1 inline-block mb-3">
                         #3 // MATRIKS Kapabilitas
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold font-syne">Layanan Infrastruktur</h2>
                 </div>
-                <div class="border-l border-yellow-700 pl-4 max-w-sm">
+                <div class="border-l border-yellow-700 pl-4 max-w-sm" data-aos="fade-left">
                     <p class="text-gray-400 text-xs font-light font-sans leading-relaxed">
                         Sembilan pilar utama layanan konstruksi dan pemeliharaan koridor
                         transit yang dioperasikan secara presisi dan sistematis.
@@ -225,31 +225,31 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
                 <service-card title="Toll Road Maintenance"
                     description="Perbaikan struktural rutin, pemeliharaan perkerasan jalan tol, dan patching aspal pada jalur koridor utama logistik lintas provinsi."
-                    src="images/road-maintenance.png"></service-card>
+                    src="images/road-maintenance.png" data-aos="fade-up" data-aos-delay="0"></service-card>
                 <service-card title="Traffic Cleaning Service"
                     description="Pekerjaan mekanis rehabilitasi, pemasangan, dan penyelarasan struktur sambungan siar muai pada jembatan dan jalan layang."
-                    src="images/traffic-cleaning-service.png"></service-card>
+                    src="images/traffic-cleaning-service.png" data-aos="fade-up" data-aos-delay="100"></service-card>
                 <service-card title="Traffic Sign Cleaning"
                     description="Pembersihan berkala rambu lalu lintas, reflektor pembatas jalan, untuk menjamin visibilitas aman bagi pengendara."
-                    src="images/traffic-sign-cleaning.png"></service-card>
+                    src="images/traffic-sign-cleaning.png" data-aos="fade-up" data-aos-delay="200"></service-card>
                 <service-card title="Road Cleaning"
                     description="Pembersihan area perkerasan jalan tol dari sisa puing, debu makadam, vegetasi liar merayap demi kelancaran laju kendaraan."
-                    src="images/road-cleaning.png"></service-card>
+                    src="images/road-cleaning.png" data-aos="fade-up" data-aos-delay="0"></service-card>
                 <service-card title="Garden Maintenance"
                     description="Penataan arsitektur lanskap hijau, perawatan tanaman media jalan, pemotongan kurap di sepanjang koridor rumija jalan tol."
-                    src="images/garden-maintenance.png"></service-card>
+                    src="images/garden-maintenance.png" data-aos="fade-up" data-aos-delay="100"></service-card>
                 <service-card title="Drainage System Cleaning"
                     description="Normalisasi, pembersihan sedimen lumpur, dan pembersihan sampah pada saluran air semen (u-ditch) penunjang badan jalan."
-                    src="images/drainage-system-cleaning.png"></service-card>
+                    src="images/drainage-system-cleaning.png" data-aos="fade-up" data-aos-delay="200"></service-card>
                 <service-card title="Concrete Barrier Cleaning"
                     description="Pembersihan mekanis beton pembatas jalur (movable concrete barrier) guna menjaga visibilitas marka regulasi tetap bersih."
-                    src="images/concrete-barrier.png"></service-card>
+                    src="images/concrete-barrier.png" data-aos="fade-up" data-aos-delay="0"></service-card>
                 <service-card title="Bronjong Works"
                     description="Pemasangan anyaman kawat baja berlapis seng dengan isi batu (gabion) untuk penahan tebing rawan longsor di tepi jalur arteri."
-                    src="images/gabion-works.png"></service-card>
+                    src="images/gabion-works.png" data-aos="fade-up" data-aos-delay="100"></service-card>
                 <service-card title="Penyedia Tenaga Kerja"
                     description="Penyediaan dan manajemen terintegrasi tim operasional lapangan tangguh bersertifikasi khusus untuk industri konstruksi berat."
-                    src="images/labor-supply.png"></service-card>
+                    src="images/labor-supply.png" data-aos="fade-up" data-aos-delay="200"></service-card>
             </div>
         </div>
     </section>
@@ -257,58 +257,57 @@
     <!-- Rekam Visual / Galeri Section (dengan Lightbox) -->
     <section id="galeri" class="w-full bg-neutral-900 py-16 md:py-32 px-4 md:px-8 flex justify-center">
         <div class="max-w-7xl w-full flex flex-col">
-            <div class="mb-16">
+            <div class="mb-16" data-aos="fade-up">
                 <div class="text-yellow-400 font-mono text-xs px-3 py-1 inline-block mb-3">
                     #4 // REKAM VISUAL
                 </div>
                 <h2 class="text-3xl md:text-5xl font-bold font-syne">Galeri Proyek Aktual</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
                 <!-- Setiap item gallery sekarang punya onclick untuk membuka lightbox -->
                 <gallery-image onclick="openLightbox(this)" subtitle="EXPANSION JOINT WORKS"
-                    title="REHABILITASI SAMBUNGAN MUAI" src="images/traffic-cleaning-service.png"></gallery-image>
+                    title="REHABILITASI SAMBUNGAN MUAI" src="images/traffic-cleaning-service.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="DIRECTIONAL SIGN MAINTENANCE"
-                    title="PEMBERSIHAN RAMBU PETUNJUK JALAN" src="images/traffic-sign-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN RAMBU PETUNJUK JALAN" src="images/traffic-sign-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="PAVEMENT PRESERVATION"
-                    title="REHABILITASI SAMBUNGAN MUAI JALAN TOL" src="images/road-maintenance.png"></gallery-image>
+                    title="REHABILITASI SAMBUNGAN MUAI JALAN TOL" src="images/road-maintenance.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="INFORMATION SIGN MAINTENANCE"
-                    title="PEMBERSIHAN RAMBU INFORMASI JALAN" src="images/traffic-sign-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN RAMBU INFORMASI JALAN" src="images/traffic-sign-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="ROADWAY CLEANING"
-                    title="PEMBERSIHAN BADAN JALAN TOL" src="images/road-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN BADAN JALAN TOL" src="images/road-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="REGULATORY SIGN MAINTENANCE"
-                    title="PEMBERSIHAN RAMBU LARANGAN" src="images/traffic-sign-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN RAMBU LARANGAN" src="images/traffic-sign-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="VEGETATION MANAGEMENT" title="PENGENDALIAN GULMA"
-                    src="images/garden-maintenance.png"></gallery-image>
+                    src="images/garden-maintenance.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="WARNING SIGN MAINTENANCE"
-                    title="PEMBERSIHAN RAMBU PETUNJUK TIKUNGAN" src="images/traffic-sign-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN RAMBU PETUNJUK TIKUNGAN" src="images/traffic-sign-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="DRAINAGE MAINTENANCE"
-                    title="PEMBERSIHAN SALURAN DRAINASE" src="images/drainage-system-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN SALURAN DRAINASE" src="images/drainage-system-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="LANDSCAPE MAINTENANCE"
-                    title="PERAWATAN TANAMAN HIAS" src="images/garden-maintenance.png"></gallery-image>
+                    title="PERAWATAN TANAMAN HIAS" src="images/garden-maintenance.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="HORTICULTURAL SERVICES"
-                    title="PEMELIHARAAN TANAMAN HIAS" src="images/garden-maintenance.png"></gallery-image>
+                    title="PEMELIHARAAN TANAMAN HIAS" src="images/garden-maintenance.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="ROAD MARKER MAINTENANCE"
-                    title="PEMBERSIHAN PATOK KILOMETER JALAN TOL" src="images/road-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN PATOK KILOMETER JALAN TOL" src="images/road-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="DRAINAGE REHABILITATION"
-                    title="NORMALISASI SALURAN DRAINASE" src="images/drainage-system-cleaning.png"></gallery-image>
+                    title="NORMALISASI SALURAN DRAINASE" src="images/drainage-system-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="CONCRETE BARRIER MAINTENANCE"
-                    title="PEMBERSIHAN CONCRETE BARRIER" src="images/concrete-barrier.png"></gallery-image>
+                    title="PEMBERSIHAN CONCRETE BARRIER" src="images/concrete-barrier.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="DRAINAGE MAINTENANCE"
-                    title="PEMBERSIHAN SALURAN DRAINASE" src="images/drainage-system-cleaning.png"></gallery-image>
+                    title="PEMBERSIHAN SALURAN DRAINASE" src="images/drainage-system-cleaning.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="INFRASTRUCTURE CLEANING"
                     title="PEMBERSIHAN CONCRETE BARRIER BERTEKANAN TINGGI"
-                    src="images/concrete-barrier.png"></gallery-image>
+                    src="images/concrete-barrier.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="SLOPE PROTECTION WORKS"
-                    title="PEKERJAAN BRONJONG PENAHAN TANAH" src="images/gabion-works.png"></gallery-image>
+                    title="PEKERJAAN BRONJONG PENAHAN TANAH" src="images/gabion-works.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="HIGH-PRESSURE CLEANING"
-                    title="PENCUCIAN CONCRETE BARRIER" src="images/concrete-barrier.png"></gallery-image>
+                    title="PENCUCIAN CONCRETE BARRIER" src="images/concrete-barrier.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="SAFETY BRIEFING"
-                    title="BRIEFING KESELAMATAN KERJA" src="images/labor-supply.png"></gallery-image>
+                    title="BRIEFING KESELAMATAN KERJA" src="images/labor-supply.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="OPERATIONAL READINESS"
-                    title="KESIAPAN PERSONEL OPERASIONAL" src="images/labor-supply.png"></gallery-image>
+                    title="KESIAPAN PERSONEL OPERASIONAL" src="images/labor-supply.png" data-aos="zoom-in"></gallery-image>
                 <gallery-image onclick="openLightbox(this)" subtitle="WORKFORCE DEPLOYMENT"
-                    title="MOBILISASI TENAGA KERJA" src="images/labor-supply.png"></gallery-image>
+                    title="MOBILISASI TENAGA KERJA" src="images/labor-supply.png" data-aos="zoom-in"></gallery-image>
             </div>
         </div>
     </section>
@@ -317,32 +316,32 @@
     <section id="keunggulan"
         class="w-full bg-neutral-900 py-16 md:py-32 px-4 md:px-8 flex justify-center border-t border-white/20">
         <div class="max-w-7xl w-full flex flex-col items-center">
-            <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-center">
+            <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-center" data-aos="fade-up">
                 #6 // PARAMETER OPERASIONAL
             </div>
-            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-syne mt-4 mb-16 text-center" data-aos="fade-up" data-aos-delay="100">
                 Nilai Keunggulan Kami
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-full border-white/20">
                 <advantage-card title="Profesional"
                     description="Manajemen operasional berbasis SLA ketat sesuai standar keselamatan nasional."
-                    icon="fa-solid fa-users-gear"></advantage-card>
+                    icon="fa-solid fa-users-gear" data-aos="fade-up" data-aos-delay="0"></advantage-card>
                 <advantage-card title="Tepat Waktu"
                     description="Ketepatan tinggi dalam mengeksekusi proyek penanganan konstruksi koridor."
-                    icon="fa-regular fa-clock"></advantage-card>
+                    icon="fa-regular fa-clock" data-aos="fade-up" data-aos-delay="100"></advantage-card>
                 <advantage-card title="Berpengalaman"
                     description="Rekam jejak terbukti menjaga ketahanan aset infrastruktur vital negara."
-                    icon="fa-solid fa-medal"></advantage-card>
+                    icon="fa-solid fa-medal" data-aos="fade-up" data-aos-delay="200"></advantage-card>
                 <advantage-card title="SDM Berkualitas"
                     description="Penyaringan dan pembekalan sertifikasi teknis ketat bagi seluruh personal kerja."
-                    icon="fa-solid fa-id-card"></advantage-card>
+                    icon="fa-solid fa-id-card" data-aos="fade-up" data-aos-delay="300"></advantage-card>
                 <advantage-card title="Customer Oriented"
                     description="Fleksibilitas tinggi menyelaraskan kualitas output kerja dengan anggaran klien."
-                    icon="fa-solid fa-handshake"></advantage-card>
+                    icon="fa-solid fa-handshake" data-aos="fade-up" data-aos-delay="400"></advantage-card>
                 <advantage-card title="Operational Excellence"
                     description="Prinsip kerja tanpa cacat (*zero delay logistic*) pada jalur transit padat."
-                    icon="fa-solid fa-bolt"></advantage-card>
+                    icon="fa-solid fa-bolt" data-aos="fade-up" data-aos-delay="500"></advantage-card>
             </div>
         </div>
     </section>
@@ -350,12 +349,12 @@
     <!-- Pengalaman Proyek Historis Section -->
     <section id="pengalaman" class="w-full flex justify-center py-16 md:py-32 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col gap-10 md:gap-24">
-            <div class="w-full">
+            <div class="w-full" data-aos="fade-right">
                 <div class="text-yellow-400 font-mono text-xs px-3 py-1 inline-block mb-3">
                     #5 // REAL ASSET TRACK
                 </div>
                 <h2 class="text-3xl md:text-5xl font-bold font-syne">
-                    Pengalaman Proyek Historis
+                        
                 </h2>
             </div>
 
@@ -365,7 +364,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <!-- Item 1 -->
-                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                    <div class="relative pt-0 md:pt-8 flex flex-col" data-aos="fade-up" data-aos-delay="0">
                         <div class="text-white font-bold font-syne text-3xl mb-4 md:mb-8 flex items-center">
                             2022
                         </div>
@@ -384,7 +383,7 @@
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                    <div class="relative pt-0 md:pt-8 flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-white font-bold font-syne text-3xl mb-4 md:mb-8 flex items-center">
                             2023
                         </div>
@@ -403,7 +402,7 @@
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                    <div class="relative pt-0 md:pt-8 flex flex-col" data-aos="fade-up" data-aos-delay="200">
                         <div class="text-white font-bold font-syne text-2xl mb-4 md:mb-8 flex items-center md:h-[36px]">
                             2024–2025
                         </div>
@@ -422,7 +421,7 @@
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="relative pt-0 md:pt-8 flex flex-col">
+                    <div class="relative pt-0 md:pt-8 flex flex-col" data-aos="fade-up" data-aos-delay="300">
                         <div
                             class="text-yellow-500 font-bold font-syne text-2xl mb-4 md:mb-8 flex items-center md:h-[36px]">
                             2025–2028
@@ -449,7 +448,7 @@
     <section id="kontak" class="w-full bg-black flex justify-center py-16 md:py-32 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col lg:flex-row justify-between items-start gap-16">
             <!-- Left Column (Heading & Form) -->
-            <div class="w-full lg:max-w-[757px] flex-1 flex flex-col gap-8">
+            <div class="w-full lg:max-w-[757px] flex-1 flex flex-col gap-8" data-aos="fade-right">
                 <!-- Header -->
                 <div class="flex flex-col gap-2">
                     <span class="text-yellow-500 font-mono text-xs">07 // HUBUNGI KAMI</span>
@@ -477,7 +476,7 @@
             </div>
 
             <!-- Right Column (Info & Coordinates) -->
-            <div class="w-full lg:max-w-[523px] flex-1 flex flex-col gap-8">
+            <div class="w-full lg:max-w-[523px] flex-1 flex flex-col gap-8" data-aos="fade-left">
                 <!-- Info Card -->
                 <div class="w-full bg-neutral-900 border border-zinc-700 p-6 flex flex-col gap-4">
                     <!-- Head Office -->
@@ -687,6 +686,19 @@
 
     <!-- Lightbox JavaScript -->
     <script src="./js/lightbox.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-out-cubic'
+            });
+        });
+    </script>
 </body>
 
 </html>
