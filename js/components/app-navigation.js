@@ -5,7 +5,7 @@ class AppNavigation extends HTMLElement {
           <div class="w-full max-w-[1440px] flex items-center justify-between px-4 md:px-12">
               <div class="flex items-center gap-1.5">
                   <a href="#beranda" class="flex items-center">
-                      <img src="images/logo-cla.png" alt="PT Cahaya Lintang Abadi Logo"
+                      <img src="images/logo-cla.webp" alt="PT Cahaya Lintang Abadi Logo"
                           class="h-8 md:h-10 w-auto object-contain" loading="lazy" />
                       <span class="brand-text text-white text-sm font-semibold ml-2">CAHAYA LINTANG
                           ABADI</span>
