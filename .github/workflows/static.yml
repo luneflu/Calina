@@ -36,6 +36,7 @@ jobs:
 
       - name: Build Tailwind CSS
         run: |
+          bun install tailwindcss@4 @tailwindcss/cli@4
           bunx @tailwindcss/cli@4 -i index.css -o build.css
           mv build.css index.css
           sed -i '/@tailwindcss\/browser@4/,/<\/script>/d' index.html
