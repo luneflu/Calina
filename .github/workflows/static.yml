@@ -40,7 +40,7 @@ jobs:
           bunx @tailwindcss/cli@4 -i index.css -o build.css
           mv build.css index.css
           sed -i '/@tailwindcss\/browser@4/,/<\/script>/d' index.html
-
+          rm -rf node_modules package.json package-lock.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
