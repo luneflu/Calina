@@ -47,7 +47,7 @@ class AppNavigation extends HTMLElement {
 
           <!-- Mobile Dropdown Menu -->
           <div id="mobile-menu"
-              class="hidden absolute top-[87px] left-0 w-full bg-black border-b border-white/20 flex-col items-center py-6 gap-6 lg:hidden">
+              class="hidden absolute top-[87px] left-0 w-full bg-neutral-900 border-b border-white/20 flex-col items-center py-6 gap-6 lg:hidden">
               <a href="#beranda" class="font-sans font-semibold text-sm text-neutral-50">Beranda</a>
               <a href="#tentang" class="font-sans font-semibold text-sm text-neutral-400">Tentang</a>
               <a href="#visi-misi" class="font-sans font-semibold text-sm text-neutral-400">Visi & Misi</a>
