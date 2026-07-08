@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'aos/dist/aos.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import Lightbox from '../components/Lightbox.astro';
 
@@ -42,7 +43,6 @@ const { title = "PT Cahaya Lintang Abadi" } = Astro.props;
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900&family=Syne:wght@800&display=swap"
 			rel="stylesheet">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 
 	<body class="flex flex-col min-h-screen overflow-x-hidden">
@@ -51,9 +51,11 @@ const { title = "PT Cahaya Lintang Abadi" } = Astro.props;
 		<Lightbox />
 
 		<!-- AOS Animation Library -->
-		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', function () {
+		<script>
+			import AOS from 'aos';
+			
+			// Initialize AOS when the page loads
+			document.addEventListener('DOMContentLoaded', () => {
 				AOS.init({
 					duration: 800,
 					once: true,
