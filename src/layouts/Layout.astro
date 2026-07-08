@@ -1,9 +1,10 @@
 ---
-import '../styles/global.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'aos/dist/aos.css';
+import '../styles/global.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import Lightbox from '../components/Lightbox.astro';
+import Font from 'astro/components/Font.astro';
 
 // Prevent Font Awesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false;
@@ -36,13 +37,10 @@ const { title = "PT Cahaya Lintang Abadi" } = Astro.props;
 		<meta property="og:type" content="company">
 		<link rel="icon" href="/favicon.ico" />
 		<title>{title}</title>
-
-		<!-- Fonts & Icons -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900&family=Syne:wght@800&display=swap"
-			rel="stylesheet">
+		
+		<Font cssVariable="--font-sans" />
+		<Font cssVariable="--font-syne" />
+		<Font cssVariable="--font-mono" />
 	</head>
 
 	<body class="flex flex-col min-h-screen overflow-x-hidden">

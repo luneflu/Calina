@@ -1,4 +1,5 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
+import { fontProviders } from "astro/config";
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -9,4 +10,21 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Inter", weights: [100, 900],
+      cssVariable: "--font-sans",
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Syne", weights: [400, 800],
+      cssVariable: "--font-syne",
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Inconsolata", weights: [200, 900],
+      cssVariable: "--font-mono",
+    }
+  ]
 });
