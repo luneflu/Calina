@@ -1,4 +1,5 @@
 ---
+import Icon from '../components/Icon.astro';
 import Layout from '../layouts/Layout.astro';
 import AppNavigation from '../components/AppNavigation.astro';
 import ServiceCard from '../components/ServiceCard.astro';
@@ -43,21 +44,21 @@ import GalleryImage from '../components/GalleryImage.astro';
                         <div class="text-4xl font-bold font-syne">2021</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Tahun Berdiri</div>
                     </div>
-                    <i class="fa-solid fa-building text-3xl text-yellow-400/80"></i>
+                    <Icon icon="fa-solid fa-building" class="text-3xl text-yellow-400/80" />
                 </div>
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="500">
                     <div>
                         <div class="text-4xl font-bold font-syne">9+</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Layanan Utama</div>
                     </div>
-                    <i class="fa-solid fa-cogs text-3xl text-yellow-400/80"></i>
+                    <Icon icon="fa-solid fa-cogs" class="text-3xl text-yellow-400/80" />
                 </div>
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="600">
                     <div>
                         <div class="text-4xl font-bold font-syne">Nasional</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Skala Infrastruktur</div>
                     </div>
-                    <i class="fa-solid fa-map-location-dot text-3xl text-yellow-400/80"></i>
+                    <Icon icon="fa-solid fa-map-location-dot" class="text-3xl text-yellow-400/80" />
                 </div>
             </div>
         </div>
@@ -127,7 +128,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                 <div class="flex-1 bg-neutral-900 border border-white/20 p-8 md:p-12" data-aos="fade-right">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 border border-yellow-500 text-yellow-500 bg-yellow-500/10 flex items-center justify-center">
-                            <i class="fa-solid fa-eye fa-lg"></i>
+                            <Icon icon="fa-solid fa-eye" class="fa-lg" />
                         </div>
                         <h3 class="text-2xl font-bold font-syne text-white">Visi Kami</h3>
                     </div>
@@ -142,7 +143,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                 <div class="flex-1 border border-white/20 border-t-0 md:border-t md:border-l-0 p-8 md:p-12" data-aos="fade-left">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 border border-yellow-500 text-yellow-500 bg-yellow-500/10 flex items-center justify-center">
-                            <i class="fa-solid fa-bullseye fa-lg"></i>
+                            <Icon icon="fa-solid fa-bullseye" class="fa-lg" />
                         </div>
                         <h3 class="text-2xl font-bold font-syne text-white">Misi Kami</h3>
                     </div>
@@ -388,7 +389,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                     <!-- Head Office -->
                     <div class="flex flex-col gap-1">
                         <div class="flex items-center gap-2 text-yellow-500">
-                            <i class="fa-solid fa-building text-xs"></i>
+                            <Icon icon="fa-solid fa-building" class="text-xs" />
                             <span class="font-mono text-[12px] font-bold text-white uppercase">Head Office</span>
                         </div>
                         <p class="font-mono text-[12px] text-neutral-400 leading-relaxed">
@@ -399,7 +400,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                     <!-- Branch Support Hubs 1 -->
                     <div class="flex flex-col gap-1">
                         <div class="flex items-center gap-2 text-yellow-700">
-                            <i class="fa-solid fa-sitemap text-xs"></i>
+                            <Icon icon="fa-solid fa-sitemap" class="text-xs" />
                             <span class="font-mono text-[12px] font-bold text-white uppercase">Branch Support Hubs 1</span>
                         </div>
                         <p class="font-mono text-[12px] text-neutral-400 leading-relaxed">
@@ -410,7 +411,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                     <!-- Branch Support Hubs 2 -->
                     <div class="flex flex-col gap-1">
                         <div class="flex items-center gap-2 text-yellow-700">
-                            <i class="fa-solid fa-sitemap text-xs"></i>
+                            <Icon icon="fa-solid fa-sitemap" class="text-xs" />
                             <span class="font-mono text-[12px] font-bold text-white uppercase">Branch Support Hubs 2</span>
                         </div>
                         <p class="font-mono text-[12px] text-neutral-400 leading-relaxed">
@@ -431,7 +432,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                     <!-- WhatsApp Link -->
                     <div class="mt-2">
                         <a href="https://wa.me/6282320813439" target="_blank" class="bg-green-500 text-black font-sans text-[12px] flex items-center justify-center gap-2 px-5 py-3 hover:opacity-90 transition-opacity w-[211px] h-10">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <Icon icon="fa-brands fa-whatsapp" class="text-sm" />
                             <span>Hubungi Via WhatsApp</span>
                         </a>
                     </div>
@@ -484,10 +485,10 @@ import GalleryImage from '../components/GalleryImage.astro';
                 </p>
                 <div class="flex gap-4 mt-6">
                     <a href="#" class="text-white hover:text-yellow-500 transition-colors">
-                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                        <Icon icon="fa-brands fa-linkedin-in" class="text-base" />
                     </a>
                     <a href="#" class="text-white hover:text-yellow-500 transition-colors">
-                        <i class="fa-brands fa-youtube text-base"></i>
+                        <Icon icon="fa-brands fa-youtube" class="text-base" />
                     </a>
                 </div>
             </div>

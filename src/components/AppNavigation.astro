@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 ---
 
 <nav id="navbar" class="w-full fixed z-50 flex items-center justify-center border-b border-white/20 bg-transparent h-[87px] transition-all duration-300">
@@ -29,8 +30,9 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none p-2">
-            <i class="fa-solid fa-bars text-2xl"></i>
+        <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none p-2 relative w-8 h-8 flex items-center justify-center">
+            <span id="icon-bars"><Icon icon="fa-solid fa-bars" class="text-2xl" /></span>
+            <span id="icon-xmark" class="hidden"><Icon icon="fa-solid fa-xmark" class="text-2xl" /></span>
         </button>
     </div>
 
@@ -52,7 +54,8 @@
     const navbar = document.getElementById('navbar');
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    const icon = btn?.querySelector('i');
+    const iconBars = btn?.querySelector('#icon-bars');
+    const iconXmark = btn?.querySelector('#icon-xmark');
 
     const updateNavbar = () => {
         if (!navbar || !menu) return;
@@ -69,25 +72,25 @@
     };
 
     btn?.addEventListener('click', () => {
-        if (!menu || !icon) return;
+        if (!menu) return;
         menu.classList.toggle('hidden');
         menu.classList.toggle('flex');
         if (menu.classList.contains('hidden')) {
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars');
+            iconXmark?.classList.add('hidden');
+            iconBars?.classList.remove('hidden');
         } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-xmark');
+            iconBars?.classList.add('hidden');
+            iconXmark?.classList.remove('hidden');
         }
         updateNavbar();
     });
 
     const closeMenu = () => {
-        if (!menu || !icon) return;
+        if (!menu) return;
         menu.classList.add('hidden');
         menu.classList.remove('flex');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+        iconXmark?.classList.add('hidden');
+        iconBars?.classList.remove('hidden');
         updateNavbar();
     };
 

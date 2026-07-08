@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 interface Props {
 	title: string;
 	description: string;
@@ -11,7 +13,7 @@ const { title, description, icon } = Astro.props;
 <div class="p-8 flex flex-col justify-between border border-transparent hover:border-yellow-500 transition-colors bg-black/20 group h-[200px]" {...Astro.props}>
     <div class="flex justify-between items-start">
         <div class="text-2xl text-yellow-500 group-hover:scale-110 transition-transform">
-            <i class={icon}></i>
+            <Icon icon={icon} />
         </div>
     </div>
     <div>

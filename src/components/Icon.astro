@@ -1,0 +1,46 @@
+---
+import { icon as faIcon } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faBars, faXmark, faBuilding, faCogs, faMapLocationDot, 
+  faEye, faBullseye, faUsersGear, faMedal, faIdCard, 
+  faHandshake, faBolt, faSitemap 
+} from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faWhatsapp, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+export interface Props {
+  icon: string;
+  class?: string;
+}
+
+const { icon: iconString, class: className } = Astro.props;
+
+const iconMap: Record<string, any> = {
+  'fa-solid fa-bars': faBars,
+  'fa-solid fa-xmark': faXmark,
+  'fa-solid fa-building': faBuilding,
+  'fa-solid fa-cogs': faCogs,
+  'fa-solid fa-map-location-dot': faMapLocationDot,
+  'fa-solid fa-eye': faEye,
+  'fa-solid fa-bullseye': faBullseye,
+  'fa-solid fa-users-gear': faUsersGear,
+  'fa-solid fa-medal': faMedal,
+  'fa-solid fa-id-card': faIdCard,
+  'fa-solid fa-handshake': faHandshake,
+  'fa-solid fa-bolt': faBolt,
+  'fa-solid fa-sitemap': faSitemap,
+  'fa-regular fa-clock': faClock,
+  'fa-brands fa-whatsapp': faWhatsapp,
+  'fa-brands fa-linkedin-in': faLinkedinIn,
+  'fa-brands fa-youtube': faYoutube,
+};
+
+const iconDef = iconMap[iconString];
+
+if (!iconDef) {
+  throw new Error(`Icon "${iconString}" not found in Icon.astro map.`);
+}
+
+const svgHtml = faIcon(iconDef, { classes: className ? className.split(' ') : [] }).html[0];
+---
+<Fragment set:html={svgHtml} />

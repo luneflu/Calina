@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import Lightbox from '../components/Lightbox.astro';
+
+// Prevent Font Awesome from dynamically adding its css since we did it manually above
+config.autoAddCss = false;
 
 interface Props {
 	title?: string;
@@ -35,9 +40,8 @@ const { title = "PT Cahaya Lintang Abadi" } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900&family=Syne:wght@800&display=swap"
 			rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 
