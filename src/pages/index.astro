@@ -11,6 +11,16 @@ import GalleryImage from '../components/GalleryImage.astro';
     <!-- Navigation -->
     <AppNavigation />
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282320813439" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 rounded-full p-4 shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+       aria-label="Hubungi via WhatsApp">
+        <Icon icon="fa-brands fa-whatsapp" class="text-white text-3xl" />
+        <span class="absolute right-full mr-3 bg-gray-900 text-white text-sm font-sans px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Hubungi Kami
+        </span>
+    </a>
+
     <!-- Hero Section -->
     <main id="beranda" class="w-full flex items-center justify-center p-4 md:p-8 min-h-screen pt-24 pb-24 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -398,26 +408,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                     </div>
 
                     <!-- Branch Support Hubs 1 -->
-                    <div class="flex flex-col gap-1">
-                        <div class="flex items-center gap-2 text-yellow-700">
-                            <Icon icon="fa-solid fa-sitemap" class="text-xs" />
-                            <span class="font-mono text-[12px] font-bold text-white uppercase">Branch Support Hubs 1</span>
-                        </div>
-                        <p class="font-mono text-[12px] text-neutral-400 leading-relaxed">
-                            Tamansari Metropolitan, New Bunaken G8/8A, Manado, 95256
-                        </p>
-                    </div>
-
-                    <!-- Branch Support Hubs 2 -->
-                    <div class="flex flex-col gap-1">
-                        <div class="flex items-center gap-2 text-yellow-700">
-                            <Icon icon="fa-solid fa-sitemap" class="text-xs" />
-                            <span class="font-mono text-[12px] font-bold text-white uppercase">Branch Support Hubs 2</span>
-                        </div>
-                        <p class="font-mono text-[12px] text-neutral-400 leading-relaxed">
-                            Ruko Citra Buana Kodan, RT.07/RW.05, Sawah, Tohudan, Kec. Colomadu, Kabupaten Karanganyar, Jawa Tengah, 57173
-                        </p>
-                    </div>
+                    
 
                     <!-- Contact Info Box -->
                     <div class="border border-zinc-700 p-4 flex flex-col gap-1 mt-2">
@@ -578,5 +569,3 @@ if (counter) {
 }
     </script>
 </Layout>
-
-
