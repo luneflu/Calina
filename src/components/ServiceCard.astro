@@ -9,7 +9,7 @@ interface Props {
 const { title, description, link = "#", src, ...rest } = Astro.props;
 ---
 
-<div class="bg-neutral-900 border border-white/10 flex flex-col h-[381px] group m-4 cursor-pointer" onclick={`window.openLightbox && window.openLightbox('${src || ''}', '${title}', '')`} {...rest}>
+<div class="bg-neutral-900 border border-white/10 flex flex-col h-[381px] group m-4 cursor-pointer lightbox-trigger" data-lightbox-src={src} data-lightbox-title={title} data-lightbox-subtitle="" {...rest}>
     <div class="h-[220px] w-full relative">
         {src && (
             <img src={src} alt={title} class="w-full h-full object-cover" loading="lazy" />

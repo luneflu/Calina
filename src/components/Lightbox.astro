@@ -18,37 +18,60 @@
 </div>
 
 <script>
-    window.openLightbox = function(imgSrc, title, subtitle) {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const caption = document.getElementById('lightboxCaption');
-        
-        if (!lightboxImg) return;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg') as HTMLImageElement | null;
+    const caption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('lightbox-close');
 
-        lightboxImg.src = imgSrc;
+    function open(src: string, title: string, subtitle?: string) {
+        if (!lightbox || !lightboxImg || !caption) return;
+        lightboxImg.src = src;
         lightboxImg.alt = title || 'Galeri Proyek';
         caption.textContent = subtitle ? `${subtitle} — ${title}` : title;
-
+        
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
         document.body.style.overflow = 'hidden'; // disable scroll
-    };
+    }
 
-    window.closeLightbox = function(event) {
-        const lightbox = document.getElementById('lightbox');
+    function close() {
+        if (!lightbox) return;
         lightbox.classList.add('hidden');
         lightbox.classList.remove('flex');
         document.body.style.overflow = ''; // enable scroll
-        if(event) event.stopPropagation();
-    };
+    }
 
-    // Events
-    document.getElementById('lightbox')?.addEventListener('click', window.closeLightbox);
-    document.getElementById('lightbox-close')?.addEventListener('click', window.closeLightbox);
-    
-    document.addEventListener('keydown', function (e) {
+    // Attach click listeners to all triggers
+    document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const el = trigger as HTMLElement;
+            const src = el.getAttribute('data-lightbox-src');
+            const title = el.getAttribute('data-lightbox-title') || '';
+            const subtitle = el.getAttribute('data-lightbox-subtitle') || '';
+            if (src) {
+                open(src, title, subtitle);
+            }
+        });
+    });
+
+    // Close on clicking backdrop
+    lightbox?.addEventListener('click', (e) => {
+        // Only close if clicking the backdrop container itself, not its children (image, caption)
+        if (e.target === lightbox) {
+            close();
+        }
+    });
+
+    // Close on clicking the close button
+    closeBtn?.addEventListener('click', (e) => {
+        close();
+        e.stopPropagation();
+    });
+
+    // Close on pressing Escape key
+    document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            window.closeLightbox();
+            close();
         }
     });
 </script>
