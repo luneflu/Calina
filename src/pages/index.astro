@@ -48,7 +48,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                 </div>
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="500">
                     <div>
-                        <div class="text-4xl font-bold font-syne">9+</div>
+                        <div class="text-4xl font-bold font-syne" id="counter-layanan">9+</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Layanan Utama</div>
                     </div>
                     <Icon icon="fa-solid fa-cogs" class="text-3xl text-yellow-400/80" />
@@ -187,7 +187,7 @@ import GalleryImage from '../components/GalleryImage.astro';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
                 <ServiceCard title="Toll Road Maintenance"
                     description="Perbaikan struktural rutin, pemeliharaan perkerasan jalan tol, dan patching aspal pada jalur koridor utama logistik lintas provinsi."
-                    src="/images/road-maintenance.webp" data-aos="fade-up" data-aos-delay="0" />
+                    src="/images/road-maintenance-1.webp" data-aos="fade-up" data-aos-delay="0" />
                 <ServiceCard title="Traffic Cleaning Service"
                     description="Pekerjaan mekanis rehabilitasi, pemasangan, dan penyelarasan struktur sambungan siar muai pada jembatan dan jalan layang."
                     src="/images/traffic-cleaning-service.webp" data-aos="fade-up" data-aos-delay="100" />
@@ -226,7 +226,7 @@ import GalleryImage from '../components/GalleryImage.astro';
                 <h2 class="text-3xl md:text-5xl font-bold font-syne">Galeri Proyek Aktual</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
-                <GalleryImage subtitle="PAVEMENT PRESERVATION" title="REHABILITASI SAMBUNGAN MUAI JALAN TOL" src="/images/road-maintenance.webp" data-aos="zoom-in" />
+                <GalleryImage subtitle="PAVEMENT PRESERVATION" title="REHABILITASI SAMBUNGAN MUAI JALAN TOL" src="/images/road-maintenance-1.webp" data-aos="zoom-in" />
                 <GalleryImage subtitle="EXPANSION JOINT WORKS" title="REHABILITASI SAMBUNGAN MUAI" src="/images/traffic-cleaning-service.webp" data-aos="zoom-in" />
                 <GalleryImage subtitle="DIRECTIONAL SIGN MAINTENANCE" title="PEMBERSIHAN RAMBU PETUNJUK JALAN" src="/images/traffic-road-guide-cleaning.webp" data-aos="zoom-in" />
                 <GalleryImage subtitle="REGULATORY SIGN MAINTENANCE" title="PEMBERSIHAN RAMBU LARANGAN" src="/images/sign-cleaning-1.webp" data-aos="zoom-in" />
@@ -532,4 +532,51 @@ import GalleryImage from '../components/GalleryImage.astro';
             </div>
         </div>
     </footer>
+
+    <script>
+        // Counter Animation Script
+const counter = document.getElementById('counter-layanan');
+if (counter) {
+    const target = 9;
+    const duration = 1500; // 1.5 seconds for smooth count-up
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Reset counter to 0 before starting
+                counter.textContent = '0';
+                
+                const startTime = performance.now();
+                
+                const animate = (currentTime: number) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function for smooth animation (ease-out quadratic)
+                    const easeProgress = 1 - Math.pow(1 - progress, 2);
+                    const currentValue = Math.round(easeProgress * target);
+                    
+                    // Update counter with current value
+                    counter.textContent = `${currentValue}+`;
+                    
+                    // Continue animation if not complete
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        // Ensure final value is exactly 9
+                        counter.textContent = `${target}+`;
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of element is visible
+    
+    observer.observe(counter);
+}
+    </script>
 </Layout>
+
+
