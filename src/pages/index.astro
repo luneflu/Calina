@@ -8,7 +8,7 @@ import GalleryCarousel from '../components/GalleryCarousel.astro';
 
 const galleryCategories = [
   {
-    title: "Pekerjaan L2-L3 (16 Feb)",
+    title: "Perawatan Jalan Tol ",
     subtitle: "ROAD MAINTENANCE",
     images: [
       "/galeri/16 feb L2-L3/l2_l3_1.webp",
@@ -29,60 +29,49 @@ const galleryCategories = [
     ]
   },
   {
-    title: "Pekerjaan Minggu (15 Feb)",
-    subtitle: "WEEKEND MAINTENANCE",
+    title: "Perawatan drainase & gorong-gorong",
+    subtitle: "DRAINAGE MAINTENANCE",
     images: [
-      "/galeri/minggu 15 feb/minggu_1.webp",
-      "/galeri/minggu 15 feb/minggu_2.webp",
-      "/galeri/minggu 15 feb/minggu_3.webp",
-      "/galeri/minggu 15 feb/minggu_4.webp",
-      "/galeri/minggu 15 feb/minggu_5.webp",
-      "/galeri/minggu 15 feb/minggu_6.webp",
-      "/galeri/minggu 15 feb/minggu_7.webp",
-      "/galeri/minggu 15 feb/minggu_8.webp",
-      "/galeri/minggu 15 feb/minggu_9.webp",
-      "/galeri/minggu 15 feb/minggu_10.webp",
-      "/galeri/minggu 15 feb/minggu_11.webp",
-      "/galeri/minggu 15 feb/minggu_12.webp",
-      "/galeri/minggu 15 feb/minggu_13.webp",
-      "/galeri/minggu 15 feb/minggu_14.webp",
-      "/galeri/minggu 15 feb/minggu_15.webp"
+      "/images/drainage-system-cleaning.webp",
+        "/images/drainage-maintenance-1.webp",
+        "/images/drainage-maintenance-2.webp",
+      
     ]
   },
   {
-    title: "Flagman & Traffic Control",
-    subtitle: "TRAFFIC SAFETY",
+    title: "Perawatan Taman",
+    subtitle: "Garden Maintenance",
     images: [
-      "/galeri/flagman 2.png",
-      "/galeri/flagman 3.png",
-      "/galeri/flagman 4.png",
-      "/galeri/flagman 5.png",
-      "/galeri/flagman.png"
+      "/images/garden-maintenance.webp",
+      "/images/garden-maintenance-2.webp",
+     
+      "/images/garden-maintenance-4.webp",
+      
     ]
   },
   {
-    title: "Armada & Logistik",
-    subtitle: "LOGISTICS & FLEET",
+    title: "Pembersihan rambu & marka jalan",
+    subtitle: "TRAFFIC SIGN CLEANING",
     images: [
-      "/galeri/truk 1.png",
-      "/galeri/truk 2.png",
-      "/galeri/truk 3-4.png",
-      "/galeri/truk 5.png",
-      "/galeri/truk 6.png",
-      "/galeri/truk 7.png",
-      "/galeri/truk 8.png"
+      "images/traffic-sign-cleaning.webp",
+      "/galeri/personel_3.webp",
+      "/galeri/personel_4.webp",
+      "/galeri/personel_7.webp",
+      "/galeri/personel_11.webp",
+      "/galeri/personel_9.webp",
+      "/galeri/personel_10.webp"
     ]
   },
   {
-    title: "Peralatan & Kompresor",
-    subtitle: "EQUIPMENT READINESS",
+    title: "Pembersihan jalan ",
+    subtitle: "ROAD CLEANING",
     images: [
-      "/galeri/kompresor.webp",
-      "/galeri/peralatan_1.webp",
-      "/galeri/peralatan_2.webp",
-      "/galeri/peralatan_3.webp",
-      "/galeri/peralatan_4.webp",
-      "/galeri/peralatan_5.webp"
+      "/galeri/personel_5.webp",
+      "/images/street-sweeping-1.webp",
+      "/images/path-cleaning.webp",
+      "/images/trash-cleaning-1.webp",
+      "/images/traffic-cleaning-service.webp",
+      "/images/concrete-barrier.webp"
     ]
   },
   {
@@ -93,17 +82,22 @@ const galleryCategories = [
       "/images/new-toolbox-meeting.webp",
       "/images/labor-supply.webp",
       "/galeri/personel_1.webp",
-      "/galeri/personel_2.webp",
-      "/galeri/personel_3.webp",
-      "/galeri/personel_4.webp",
-      "/galeri/personel_5.webp",
+      //"/galeri/personel_2.webp",
+      
+   
+      
       "/galeri/personel_6.webp",
-      "/galeri/personel_7.webp",
-      "/galeri/personel_8.webp",
-      "/galeri/personel_9.webp",
-      "/galeri/personel_10.webp"
     ]
-  }
+  },
+  {
+    title: "outsourcing tenaga kerja",
+    subtitle: "LABOR OUTSOURCING",
+    images: [
+      "/images/outsourcing.webp",
+     
+      
+    ]
+  },
 ];
 ---
 
@@ -125,7 +119,23 @@ const galleryCategories = [
     <main id="beranda" class="w-full flex items-center justify-center p-4 md:p-8 min-h-screen pt-24 pb-24 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-zinc-900/50 mix-blend-multiply z-10"></div>
-            <img src="/images/hero.webp" alt="Hero Background" class="w-full h-full object-cover opacity-50" loading="eager" />
+            <video 
+                id="hero-video"
+                autoplay 
+                loop 
+                muted
+                playsinline 
+                 class="w-full h-full object-cover opacity-50"
+            >
+                <source src="/video/calina_home.mp4" type="video/mp4" />
+            </video>
+            <!-- Sound toggle button -->
+            <button id="sound-toggle" onclick="toggleSound()" class="absolute bottom-20 right-6 z-20 bg-black/50 border border-white/30 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-all" title="Toggle suara">
+                <span id="sound-icon">🔇</span>
+            </button>
+            <!-- Animated ambient orbs -->
+            <div class="hero-orb absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-yellow-500/5 blur-3xl animate-float" style="animation-duration:7s"></div>
+            <div class="hero-orb absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-yellow-400/4 blur-3xl animate-float" style="animation-duration:9s;animation-delay:2s"></div>
         </div>
 
         <div class="max-w-7xl w-full flex flex-col lg:flex-row gap-16 items-center justify-between relative z-10">
@@ -135,15 +145,15 @@ const galleryCategories = [
                 </div>
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-bold leading-tight" data-aos="fade-up" data-aos-delay="100">
                     Partner in <br />
-                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">Excellence.</span>
+                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent" id="typed-word">Excellence.</span><span class="typed-cursor" id="typed-cursor" aria-hidden="true"></span>
                 </h1>
                 <p class="text-lg max-w-xl font-sans" data-aos="fade-up" data-aos-delay="200">
-                    Layanan berskala nasional dan profesional di bidang konstruksi,
-                    pemeliharaan jalan tol, pemeliharaan infrastruktur, jasa kebersihan,
+                    Pelayanan berskala nasional dan profesional di bidang konstruksi,
+                    perawatan jalan tol, pemeliharaan infrastruktur, jasa kebersihan,
                     dan penyediaan tenaga kerja handal.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#kontak" class="bg-yellow-500 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(234,179,8,0.25)] hover:opacity-90 transition-opacity">Hubungi Kami</a>
+                    <a href="#kontak" class="btn-glow bg-yellow-500 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(234,179,8,0.25)] hover:bg-yellow-400 transition-colors">Hubungi Kami</a>
                     <a href="#layanan" class="border border-gray-400 text-white px-8 py-4 text-sm font-bold hover:bg-white/10 transition-colors">Layanan Kami</a>
                 </div>
             </div>
@@ -151,35 +161,56 @@ const galleryCategories = [
             <div class="flex-1 flex flex-col gap-6 w-full lg:max-w-md">
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="400">
                     <div>
-                        <div class="text-4xl font-bold font-syne">2021</div>
+                        <div class="stat-num text-4xl font-bold font-syne">2021</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Tahun Berdiri</div>
                     </div>
                     <Icon icon="fa-solid fa-building" class="text-3xl text-yellow-400/80" />
                 </div>
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="500">
                     <div>
-                        <div class="text-4xl font-bold font-syne" id="counter-layanan">9+</div>
+                        <div class="stat-num text-4xl font-bold font-syne" id="counter-layanan">0+</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Layanan Utama</div>
                     </div>
                     <Icon icon="fa-solid fa-cogs" class="text-3xl text-yellow-400/80" />
                 </div>
                 <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="600">
                     <div>
-                        <div class="text-4xl font-bold font-syne">Nasional</div>
+                        <div class="stat-num text-4xl font-bold font-syne">Nasional</div>
                         <div class="text-gray-400 font-mono text-sm mt-1">Skala Infrastruktur</div>
                     </div>
                     <Icon icon="fa-solid fa-map-location-dot" class="text-3xl text-yellow-400/80" />
                 </div>
             </div>
         </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10" data-aos="fade-up" data-aos-delay="600">
+            <span class="text-white/30 font-mono text-[10px] tracking-widest uppercase">Scroll</span>
+            <div class="w-px h-10 bg-gradient-to-b from-yellow-500/60 to-transparent animate-glow"></div>
+        </div>
     </main>
+
+    <!-- Marquee ticker -->
+    <div class="w-full overflow-hidden border-y border-white/10 bg-neutral-950 py-3" aria-hidden="true">
+        <div class="marquee-track">
+            {[
+                "TOLL ROAD MAINTENANCE","TRAFFIC CLEANING","ROAD CLEANING","GARDEN MAINTENANCE",
+                "DRAINAGE SYSTEM","CONCRETE BARRIER","BRONJONG WORKS","TENAGA KERJA","TRAFFIC SIGN",
+                "TOLL ROAD MAINTENANCE","TRAFFIC CLEANING","ROAD CLEANING","GARDEN MAINTENANCE",
+                "DRAINAGE SYSTEM","CONCRETE BARRIER","BRONJONG WORKS","TENAGA KERJA","TRAFFIC SIGN"
+            ].map(item => (
+                <span class="font-mono text-[11px] text-neutral-500 tracking-widest uppercase px-8 shrink-0">
+                    <span class="text-yellow-600 mr-3">✦</span>{item}
+                </span>
+            ))}
+        </div>
+    </div>
 
     <hr class="border-t border-white/20" />
 
     <!-- Tentang Perusahaan Section -->
     <section id="tentang" class="w-full flex justify-center py-16 md:py-24 px-4 md:px-8">
         <div class="max-w-7xl w-full flex flex-col md:flex-row gap-16 items-start">
-            <img src="/images/about.webp" alt="Tentang PT Cahaya Lintang Abadi" class="w-full md:w-[523px] h-[300px] md:h-[502px] object-cover shadow-[0_25px_50px_rgba(0,0,0,0.25)]" loading="lazy" data-aos="fade-right" />
+            <img src="/images/toolbox-meeting.webp" alt="Tentang PT Cahaya Lintang Abadi" class="w-full md:w-[523px] h-[300px] md:h-[502px] object-cover shadow-[0_25px_50px_rgba(0,0,0,0.25)]" loading="lazy" data-aos="fade-right" />
             <div class="flex-1 flex flex-col gap-6 pt-6" data-aos="fade-left">
                 <div class="text-yellow-400 font-mono text-xs px-3 py-1 self-start">
                     #1 // TENTANG PERUSAHAAN
@@ -285,6 +316,7 @@ const galleryCategories = [
                         #3 // MATRIKS Kapabilitas
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold font-syne">Layanan Infrastruktur</h2>
+                    <span class="section-line" data-aos="fade-right" data-aos-delay="200"></span>
                 </div>
                 <div class="border-l border-yellow-700 pl-4 max-w-sm" data-aos="fade-left">
                     <p class="text-gray-400 text-xs font-light font-sans leading-relaxed">
@@ -297,30 +329,75 @@ const galleryCategories = [
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
                 <ServiceCard title="Toll Road Maintenance"
                     description="Perbaikan struktural rutin, pemeliharaan perkerasan jalan tol, dan patching aspal pada jalur koridor utama logistik lintas provinsi."
-                    src="/images/road-maintenance-1.webp" data-aos="fade-up" data-aos-delay="0" />
+                    points={[
+                        "Patching aspal & perbaikan lubang (pothole)",
+                        "Pemeliharaan perkerasan jalan (scrapping, filling, overlay)",
+                        "Perbaikan struktural jembatan & jalan tol"
+                    ]}
+                    src="/galeri/KOMPRESOR.webp" data-aos="fade-up" data-aos-delay="0" />
                 <ServiceCard title="Traffic Cleaning Service"
                     description="Pekerjaan mekanis rehabilitasi, pemasangan, dan penyelarasan struktur sambungan siar muai pada jembatan dan jalan layang."
+                    points={[
+                        "Pembersihan & perawatan expansion joint (siar muai)",
+                        "Pembersihan guardrail & pagar pengaman jalan",
+                        "Pembersihan rambu & marka jalan secara mekanis"
+                    ]}
                     src="/images/traffic-cleaning-service.webp" data-aos="fade-up" data-aos-delay="100" />
                 <ServiceCard title="Traffic Sign Cleaning"
                     description="Pembersihan berkala rambu lalu lintas, reflektor pembatas jalan, untuk menjamin visibilitas aman bagi pengendara."
-                    src="/images/traffic-sign-cleaning.webp" data-aos="fade-up" data-aos-delay="200" />
+                    points={[
+                        "Pembersihan rambu petunjuk arah & rambu peringatan",
+                        "Perawatan reflektor pembatas jalan (delineator)",
+                        "Inspeksi visibilitas rambu malam hari"
+                    ]}
+                    src="/galeri/personel_11.webp" data-aos="fade-up" data-aos-delay="200" />
                 <ServiceCard title="Road Cleaning"
                     description="Pembersihan area perkerasan jalan tol dari sisa puing, debu makadam, vegetasi liar merayap demi kelancaran laju kendaraan."
+                    points={[
+                        "Penyapuan jalan mekanis (sweeper truck) & manual",
+                        "Pembersihan ceceran material/puing di lajur tol",
+                        "Penanganan tumpahan oli/zat kimia berbahaya"
+                    ]}
                     src="/images/street-sweeping-1.webp" data-aos="fade-up" data-aos-delay="0" />
                 <ServiceCard title="Garden Maintenance"
                     description="Penataan arsitektur lanskap hijau, perawatan tanaman media jalan, pemotongan kurap di sepanjang koridor rumija jalan tol."
+                    points={[
+                        "Pemotongan rumput rumija (ruang milik jalan)",
+                        "Perawatan tanaman hias di median jalan tol",
+                        "Pemangkasan pohon yang menghalangi pandangan/rambu"
+                    ]}
                     src="/images/garden-maintenance.webp" data-aos="fade-up" data-aos-delay="100" />
                 <ServiceCard title="Drainage System Cleaning"
                     description="Normalisasi, pembersihan sedimen lumpur, dan pembersihan sampah pada saluran air semen (u-ditch) penunjang badan jalan."
+                    points={[
+                        "Pengerukan sedimen lumpur pada saluran u-ditch",
+                        "Pembersihan sampah penyumbat gorong-gorong",
+                        "Pemeliharaan & perbaikan dinding saluran air"
+                    ]}
                     src="/images/drainage-system-cleaning.webp" data-aos="fade-up" data-aos-delay="200" />
                 <ServiceCard title="Concrete Barrier Cleaning"
                     description="Pembersihan mekanis beton pembatas jalur (movable concrete barrier) guna menjaga visibilitas marka regulasi tetap bersih."
+                    points={[
+                        "Pencucian beton pembatas jalan (MCB) berkala",
+                        "Pengecatan ulang marka pembatas jalan",
+                        "Pembersihan reflektor pada barrier beton"
+                    ]}
                     src="/images/concrete-barrier.webp" data-aos="fade-up" data-aos-delay="0" />
                 <ServiceCard title="Bronjong Works"
                     description="Pemasangan anyaman kawat baja berlapis seng dengan isi batu (gabion) untuk penahan tebing rawan longsor di tepi jalur arteri."
+                    points={[
+                        "Perakitan & pemasangan kawat bronjong (gabion)",
+                        "Pengisian batu kali berkualitas tinggi",
+                        "Proteksi lereng & tebing rawan longsor"
+                    ]}
                     src="/images/gabion-works.webp" data-aos="fade-up" data-aos-delay="100" />
                 <ServiceCard title="Penyedia Tenaga Kerja"
                     description="Penyediaan dan manajemen terintegrasi tim operasional lapangan tangguh bersertifikasi khusus untuk industri konstruksi berat."
+                    points={[
+                        "Penyediaan tenaga kerja lapangan (flagman, sweeper, gardener)",
+                        "Pelatihan keselamatan kerja (K3) konstruksi jalan tol",
+                        "Manajemen & pengawasan operasional terintegrasi"
+                    ]}
                     src="/images/labor-supply.webp" data-aos="fade-up" data-aos-delay="200" />
             </div>
         </div>
@@ -588,48 +665,114 @@ const galleryCategories = [
         </div>
     </footer>
 
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Kembali ke atas" title="Kembali ke atas">
+        ↑
+    </button>
+
     <script>
-        // Counter Animation Script
-const counter = document.getElementById('counter-layanan');
-if (counter) {
-    const target = 9;
-    const duration = 1500; // 1.5 seconds for smooth count-up
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Reset counter to 0 before starting
-                counter.textContent = '0';
-                
-                const startTime = performance.now();
-                
-                const animate = (currentTime: number) => {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    
-                    // Easing function for smooth animation (ease-out quadratic)
-                    const easeProgress = 1 - Math.pow(1 - progress, 2);
-                    const currentValue = Math.round(easeProgress * target);
-                    
-                    // Update counter with current value
-                    counter.textContent = `${currentValue}+`;
-                    
-                    // Continue animation if not complete
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        // Ensure final value is exactly 9
-                        counter.textContent = `${target}+`;
-                    }
-                };
-                
-                requestAnimationFrame(animate);
-                observer.unobserve(counter);
+        // ── Page-load fade-in ─────────────────────────────────
+        document.documentElement.style.opacity = '0';
+        document.documentElement.style.transition = 'opacity 0.45s ease';
+        window.addEventListener('load', () => { document.documentElement.style.opacity = '1'; });
+
+        // ── Typed text effect on hero ─────────────────────────
+        const typedEl = document.getElementById('typed-word');
+        const cursor  = document.getElementById('typed-cursor');
+        const words   = ['Excellence.',];
+        let wi = 0, ci = 0, deleting = false;
+        const SPEED_TYPE = 80, SPEED_DEL = 45, PAUSE = 2200;
+        function typeLoop() {
+            if (!typedEl) return;
+            const word = words[wi];
+            if (!deleting) {
+                typedEl.textContent = word.slice(0, ++ci);
+                if (ci === word.length) { deleting = true; setTimeout(typeLoop, PAUSE); return; }
+            } else {
+                typedEl.textContent = word.slice(0, --ci);
+                if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+            }
+            setTimeout(typeLoop, deleting ? SPEED_DEL : SPEED_TYPE);
+        }
+        // Start after AOS intro delay
+        setTimeout(typeLoop, 1800);
+
+        // ── Counter animation (scroll-triggered) ─────────────
+        function animateCounter(el: HTMLElement, target: number, duration: number, suffix = '+') {
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    const start = performance.now();
+                    const tick = (now: number) => {
+                        const p = Math.min((now - start) / duration, 1);
+                        const ease = 1 - Math.pow(1 - p, 3);
+                        el.textContent = Math.round(ease * target) + suffix;
+                        if (p < 1) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                    obs.unobserve(el);
+                });
+            }, { threshold: 0.5 });
+            obs.observe(el);
+        }
+        const counterEl = document.getElementById('counter-layanan');
+        if (counterEl) animateCounter(counterEl as HTMLElement, 9, 1400);
+
+        // ── Mobile menu slide-down animation ─────────────────
+        const mobileMenu = document.getElementById('mobile-menu');
+        const origToggle = mobileMenu?.classList.toggle.bind(mobileMenu.classList);
+        const menuObserver = new MutationObserver(() => {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('mobile-menu-open');
             }
         });
-    }, { threshold: 0.5 }); // Trigger when 50% of element is visible
-    
-    observer.observe(counter);
-}
+        if (mobileMenu) menuObserver.observe(mobileMenu, { attributes: true, attributeFilter: ['class'] });
+
+        // ── Parallax subtle on hero orbs ─────────────────────
+        const orbs = document.querySelectorAll<HTMLElement>('.hero-orb');
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            orbs.forEach((orb, i) => {
+                orb.style.transform = `translateY(${y * (i % 2 === 0 ? 0.08 : -0.06)}px)`;
+            });
+        }, { passive: true });
+        // ── Scroll-to-top button ──────────────────────────────────────────────
+        const scrollBtn = document.getElementById('scroll-top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) scrollBtn?.classList.add('visible');
+            else scrollBtn?.classList.remove('visible');
+        }, { passive: true });
+        scrollBtn?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Sound toggle on hero click ────────────────────────
+        const heroVideo = document.getElementById('hero-video') as HTMLVideoElement;
+        const soundIcon = document.getElementById('sound-icon');
+        function toggleSound() {
+            if (!heroVideo) return;
+            heroVideo.muted = !heroVideo.muted;
+            if (soundIcon) soundIcon.textContent = heroVideo.muted ? '🔇' : '🔊';
+        }
+        // Clicking anywhere on hero section to unmute
+        document.getElementById('beranda')?.addEventListener('click', (e) => {
+            const target = e.target as HTMLElement;
+            if (target.closest('#sound-toggle')) return;
+            if (heroVideo && heroVideo.muted) {
+                heroVideo.muted = false;
+                if (soundIcon) soundIcon.textContent = '🔊';
+            }
+        });
+        // Mute again when user scrolls away from hero
+        const beranda = document.getElementById('beranda');
+        const muteObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting && heroVideo && !heroVideo.muted) {
+                    heroVideo.muted = true;
+                    if (soundIcon) soundIcon.textContent = '🔇';
+                }
+            });
+        }, { threshold: 0.1 });
+        if (beranda) muteObserver.observe(beranda);
+        (window as any).toggleSound = toggleSound;
     </script>
 </Layout>
