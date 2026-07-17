@@ -133,48 +133,61 @@ const galleryCategories = [
             <div class="hero-orb absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-yellow-400/4 blur-3xl animate-float" style="animation-duration:9s;animation-delay:2s"></div>
         </div>
 
-        <div class="max-w-7xl w-full flex flex-col lg:flex-row gap-16 items-center justify-between relative z-10">
-            <div class="flex-1 space-y-8">
-                <div class="inline-block border-l border-yellow-400 font-mono text-sm px-3 py-1" data-aos="fade-up">
-                    Perusahaan Tepercaya Pemeliharaan Infrastruktur
+        <div class="max-w-6xl w-full relative z-10">
+            <!-- Slides Container -->
+            <div class="relative w-full">
+                <!-- Slide 1 -->
+                <div class="hero-slide w-full flex flex-col lg:flex-row items-center justify-between gap-12 transition-all duration-700 opacity-100 z-10 relative" data-slide="0">
+                    <div class="w-full lg:w-7/12 text-left flex flex-col gap-6" data-aos="fade-up">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-syne font-bold leading-tight text-white">
+                            Your Best <span class="bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent" id="typed-word">Toll Road</span><span class="typed-cursor" id="typed-cursor" aria-hidden="true"></span><br /> Services
+                        </h1>
+                        <p class="text-base md:text-lg text-gray-300 font-sans leading-relaxed">
+                            PT Cahaya Lintang Abadi merupakan perusahaan yang bergerak di bidang penyedia jasa perawatan jalan tol, pemeliharaan infrastruktur, jasa kebersihan, dan penyediaan tenaga kerja.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a href="#kontak" class="btn-glow bg-yellow-500 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(234,179,8,0.25)] hover:bg-yellow-400 transition-colors text-center">Hubungi Kami</a>
+                            <a href="#layanan" class="border border-gray-400 text-white px-8 py-4 text-sm font-bold hover:bg-white/10 transition-colors text-center">Layanan Kami</a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-5/12 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-48 h-48 md:w-64 md:h-64 flex items-center justify-center ">
+                            <img src="/images/logo-cla.webp" alt="PT Cahaya Lintang Abadi" class="max-w-full max-h-full object-contain" />
+                        </div>
+                        <div class="mt-6 bg-yellow-500/10 border border-yellow-500/30 px-4 py-2 rounded-full">
+                            <h5 class="text-yellow-500 font-mono text-xs uppercase tracking-widest">Toll Road & Infrastructure Specialist</h5>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-bold leading-tight" data-aos="fade-up" data-aos-delay="100">
-                    Partner in <br />
-                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent" id="typed-word">Excellence.</span><span class="typed-cursor" id="typed-cursor" aria-hidden="true"></span>
-                </h1>
-                <p class="text-lg max-w-xl font-sans" data-aos="fade-up" data-aos-delay="200">
-                    PT Cahaya Lintang Abadi berdiri sejak tahun 2021 sebagai perusahaan penyedia jasa,
-                    perawatan jalan tol, pemeliharaan infrastruktur, jasa kebersihan,
-                    dan penyediaan tenaga kerja.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#kontak" class="btn-glow bg-yellow-500 text-white px-8 py-4 text-sm font-bold shadow-[0_4px_6px_rgba(234,179,8,0.25)] hover:bg-yellow-400 transition-colors">Hubungi Kami</a>
-                    <a href="#layanan" class="border border-gray-400 text-white px-8 py-4 text-sm font-bold hover:bg-white/10 transition-colors">Layanan Kami</a>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide w-full flex flex-col items-center justify-center text-center gap-8 transition-all duration-700 opacity-0 pointer-events-none z-0 absolute inset-0" data-slide="1">
+                    <div class="w-48 h-48 md:w-64 md:h-64 flex items-center justify-center ">
+                        <img src="/images/logo-cla.webp" alt="PT Cahaya Lintang Abadi" class="max-w-full max-h-full object-contain" />
+                    </div>
+                    <div class="max-w-3xl flex flex-col items-center gap-6">
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-syne font-bold leading-tight text-white uppercase tracking-tight">
+                            "Partner in Excellence"
+                        </h1>
+                        <div class="bg-yellow-500/10 border border-yellow-500/30 px-6 py-2 rounded-full">
+                            <h5 class="text-yellow-500 font-mono text-sm uppercase tracking-widest font-bold">#KamiSiapMelayani</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex-1 flex flex-col gap-6 w-full lg:max-w-md">
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="400">
-                    <div>
-                        <div class="stat-num text-4xl font-bold font-syne">2021</div>
-                        <div class="text-gray-400 font-mono text-sm mt-1">Tahun Berdiri</div>
-                    </div>
-                    <Icon icon="fa-solid fa-building" class="text-3xl text-yellow-400/80" />
-                </div>
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="500">
-                    <div>
-                        <div class="stat-num text-4xl font-bold font-syne" id="counter-layanan">0+</div>
-                        <div class="text-gray-400 font-mono text-sm mt-1">Layanan Utama</div>
-                    </div>
-                    <Icon icon="fa-solid fa-cogs" class="text-3xl text-yellow-400/80" />
-                </div>
-                <div class="border border-white/20 p-6 flex justify-between items-center bg-white/5" data-aos="fade-left" data-aos-delay="600">
-                    <div>
-                        <div class="stat-num text-4xl font-bold font-syne">Nasional</div>
-                        <div class="text-gray-400 font-mono text-sm mt-1">Skala Infrastruktur</div>
-                    </div>
-                    <Icon icon="fa-solid fa-map-location-dot" class="text-3xl text-yellow-400/80" />
-                </div>
+            <!-- Navigation Buttons -->
+            <button id="hero-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-20 bg-black/50 border border-white/20 text-white hover:bg-yellow-500 hover:text-black hover:border-yellow-500 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer" aria-label="Previous slide">
+                <Icon icon="fa-solid fa-chevron-left" class="text-lg" />
+            </button>
+            <button id="hero-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-20 bg-black/50 border border-white/20 text-white hover:bg-yellow-500 hover:text-black hover:border-yellow-500 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer" aria-label="Next slide">
+                <Icon icon="fa-solid fa-chevron-right" class="text-lg" />
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center gap-3 mt-12">
+                <button class="hero-dot w-3 h-3 rounded-full bg-yellow-500 transition-all duration-300 cursor-pointer" data-index="0" aria-label="Go to slide 1"></button>
+                <button class="hero-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300 cursor-pointer" data-index="1" aria-label="Go to slide 2"></button>
             </div>
         </div>
         <!-- Scroll indicator -->
@@ -243,6 +256,20 @@ const galleryCategories = [
                                 lapangan ekstrim.
                             </p>
                         </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10 w-full">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-syne text-yellow-500" id="counter-layanan">0+</div>
+                        <div class="text-[10px] md:text-xs text-gray-400 font-sans uppercase tracking-wider mt-1">Layanan Utama</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-syne text-yellow-500" id="counter-pengalaman">0+</div>
+                        <div class="text-[10px] md:text-xs text-gray-400 font-sans uppercase tracking-wider mt-1">Tahun Pengalaman</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-syne text-yellow-500" id="counter-proyek">0+</div>
+                        <div class="text-[10px] md:text-xs text-gray-400 font-sans uppercase tracking-wider mt-1">Proyek Strategis</div>
                     </div>
                 </div>
             </div>
@@ -671,7 +698,7 @@ const galleryCategories = [
         // ── Typed text effect on hero ─────────────────────────
         const typedEl = document.getElementById('typed-word');
         const cursor  = document.getElementById('typed-cursor');
-        const words   = ['Excellence.',];
+        const words   = ['Maintenance Toll Road',];
         let wi = 0, ci = 0, deleting = false;
         const SPEED_TYPE = 80, SPEED_DEL = 45, PAUSE = 2200;
         function typeLoop() {
@@ -688,6 +715,78 @@ const galleryCategories = [
         }
         // Start after AOS intro delay
         setTimeout(typeLoop, 1800);
+
+        // ── Hero Slider ───────────────────────────────────────
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        const prevBtn = document.getElementById('hero-prev');
+        const nextBtn = document.getElementById('hero-next');
+        let currentSlide = 0;
+        let slideInterval: number;
+
+        function showSlide(index: number) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('absolute', 'inset-0', 'opacity-0', 'pointer-events-none', 'z-0');
+                    slide.classList.add('relative', 'opacity-100', 'z-10');
+                } else {
+                    slide.classList.remove('relative', 'opacity-100', 'z-10');
+                    slide.classList.add('absolute', 'inset-0', 'opacity-0', 'pointer-events-none', 'z-0');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-white/30');
+                    dot.classList.add('bg-yellow-500');
+                } else {
+                    dot.classList.remove('bg-yellow-500');
+                    dot.classList.add('bg-white/30');
+                }
+            });
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            const prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            slideInterval = setInterval(nextSlide, 6000) as any;
+        }
+
+        function stopAutoplay() {
+            if (slideInterval) clearInterval(slideInterval);
+        }
+
+        prevBtn?.addEventListener('click', () => {
+            prevSlide();
+            startAutoplay();
+        });
+
+        nextBtn?.addEventListener('click', () => {
+            nextSlide();
+            startAutoplay();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+                startAutoplay();
+            });
+        });
+
+        if (slides.length > 0) {
+            startAutoplay();
+        }
 
         // ── Counter animation (scroll-triggered) ─────────────
         function animateCounter(el: HTMLElement, target: number, duration: number, suffix = '+') {
@@ -707,8 +806,14 @@ const galleryCategories = [
             }, { threshold: 0.5 });
             obs.observe(el);
         }
-        const counterEl = document.getElementById('counter-layanan');
-        if (counterEl) animateCounter(counterEl as HTMLElement, 9, 1400);
+        const counterLayanan = document.getElementById('counter-layanan');
+        if (counterLayanan) animateCounter(counterLayanan as HTMLElement, 9, 1400, '+');
+
+        const counterPengalaman = document.getElementById('counter-pengalaman');
+        if (counterPengalaman) animateCounter(counterPengalaman as HTMLElement, 5, 1400, '+');
+
+        const counterProyek = document.getElementById('counter-proyek');
+        if (counterProyek) animateCounter(counterProyek as HTMLElement, 4, 1400, '+');
 
         // ── Mobile menu slide-down animation ─────────────────
         const mobileMenu = document.getElementById('mobile-menu');
